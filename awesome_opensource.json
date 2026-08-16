@@ -63,7 +63,7 @@
       "docker": "glanceapp/glance"
     },
     "url": "https://github.com/glanceapp/glance",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/glance.svg",
     "tags": [
       "Dashboard",
       "Self-Hosted",
@@ -101,7 +101,7 @@
       "docker": "mauriceboe/trek:latest"
     },
     "url": "https://github.com/liketrek/TREK",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/trek.svg",
     "tags": [
       "Voyage",
       "Self-Hosted"
@@ -191,7 +191,7 @@
       "scoop": "trivy"
     },
     "url": "https://aquasecurity.github.io/trivy/",
-    "logo": "https://icon.horse/icon/aquasecurity.github.io",
+    "logo": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/trivy.png",
     "tags": [
       "Sécurité",
       "DevSecOps",
@@ -211,7 +211,7 @@
       "aur": "nginx-ui-bin"
     },
     "url": "https://github.com/0xJacky/nginx-ui",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/0xJacky/nginx-ui/dev/resources/logo.png",
     "tags": [
       "Serveur",
       "Self-Hosted",
@@ -231,7 +231,7 @@
       "docker": "siloserver/silo-server"
     },
     "url": "https://github.com/Silo-Server/silo-server",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://siloserver.org/brand/silo-wordmark-white.svg",
     "tags": [
       "Multimédia",
       "Self-Hosted",
@@ -282,7 +282,7 @@
       "scoop": "yt-dlp"
     },
     "url": "https://github.com/yt-dlp/yt-dlp",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/yt-dlp.svg",
     "tags": [
       "CLI",
       "Vidéo",
@@ -300,8 +300,8 @@
     "packages": {
       "docker": "marcobaobao/yt-dlp-webui"
     },
-    "url": "https://github.com/marcobaobao/yt-dlp-webui",
-    "logo": "https://icon.horse/icon/github.com",
+    "url": "https://github.com/marcopiovanello/yt-dlp-web-ui",
+    "logo": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/yt-dlp.svg",
     "tags": [
       "Web",
       "Self-Hosted",
@@ -348,7 +348,7 @@
       "flatpak": "nl.jknaapen.fladder"
     },
     "url": "https://github.com/DonutWare/Fladder",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/DonutWare/Fladder/refs/heads/develop/icons/production/fladder_macos_icon.png",
     "tags": [
       "Multimédia",
       "Streaming",
@@ -367,7 +367,7 @@
       "docker": "elonen/clapshot"
     },
     "url": "https://github.com/elonen/clapshot",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/elonen/clapshot/refs/heads/master/client/public/clapshot-logo.png",
     "tags": [
       "Vidéo",
       "Self-Hosted",
@@ -385,7 +385,7 @@
     ],
     "packages": {},
     "url": "https://github.com/Diolinux/PhotoGIMP",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/Diolinux/PhotoGIMP/refs/heads/master/.local/share/icons/hicolor/256x256/256x256.png",
     "tags": [
       "Image",
       "Design",
@@ -406,7 +406,7 @@
       "aur": "rapidraw-bin"
     },
     "url": "https://github.com/CyberTimon/RapidRAW",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/CyberTimon/RapidRAW/main/src-tauri/icons/full_res_original.png",
     "tags": [
       "Image",
       "Photographie"
@@ -425,7 +425,7 @@
       "aur": "xl-converter"
     },
     "url": "https://github.com/JacobDev1/xl-converter",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/JacobDev1/xl-converter/stable/assets/icons/logo.svg",
     "tags": [
       "Image",
       "Conversion"
@@ -445,7 +445,7 @@
       "flatpak": "org.fooyin.fooyin"
     },
     "url": "https://github.com/fooyin/fooyin",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://imgproxy.flathub.org/insecure/dpr:1/f:webp/q:100/rs:fit:128:128/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9vcmcvZm9veWluL2Zvb3lpbi9mYjljYjg0MDA5ZWU1MGI4MzkyZjgyMzcwMjY5YjI5Ny9pY29ucy8xMjh4MTI4L29yZy5mb295aW4uZm9veWluLnBuZw",
     "tags": [
       "Audio",
       "Musique",
@@ -516,7 +516,7 @@
       "winget": "Trilium.Trilium"
     },
     "url": "https://github.com/TriliumNext/Trilium",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/trilium-notes.svg",
     "tags": [
       "Notes",
       "PKM",
@@ -540,7 +540,7 @@
       "winget": "Xournal++.Xournal++"
     },
     "url": "https://github.com/xournalpp/xournalpp",
-    "logo": "https://icon.horse/icon/xournalpp.com",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Xournal%2B%2B_logo.svg/langfr-1280px-Xournal%2B%2B_logo.svg.png",
     "tags": [
       "Notes",
       "PDF",
@@ -557,7 +557,7 @@
     ],
     "packages": {},
     "url": "https://github.com/nyblnet/bento",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/nyblnet/bento/main/docs/assets/bento-logo.svg",
     "tags": [
       "Bureautique",
       "Minimaliste",
@@ -576,7 +576,7 @@
     ],
     "packages": {},
     "url": "https://github.com/simonoppowa/OpenNutriTracker",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://play-lh.googleusercontent.com/aRJh-qRmIXUDZQIg1YHMdkREI5aI0lfCCZPYRJzPhgRyhXvrfbjRaam_M4TW5SsumutYRHFLjh8I5Sz2_ngdUw=w240-h480-rw",
     "tags": [
       "Santé",
       "Mobile",
@@ -594,7 +594,7 @@
     ],
     "packages": {},
     "url": "https://github.com/Hoferlukaslh/ScholarLog",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/Hoferlukaslh/ScholarLog/refs/heads/main/src/Assets/Images/ScholarLog.png",
     "tags": [
       "Éducation",
       "Productivité"
@@ -641,7 +641,7 @@
       "snap": "whatsie"
     },
     "url": "https://github.com/keshavbhatt/whatsie",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://imgproxy.flathub.org/insecure/dpr:1/f:avif/q:100/rs:fit:128:128/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9jb20va3RlY2hwaXQvd2hhdHNpZS84ODFjNTQ2YTA4ZmRiZDg0Njk1MDQyOWNjNmE5NGNkMy9pY29ucy8xMjh4MTI4L2NvbS5rdGVjaHBpdC53aGF0c2llLnBuZw",
     "tags": [
       "Messagerie",
       "Desktop"
@@ -660,7 +660,7 @@
       "aur": "clamui"
     },
     "url": "https://github.com/linx-systems/clamui",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://imgproxy.flathub.org/insecure/dpr:1/f:avif/q:100/rs:fit:128:128/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9pby9naXRodWIvbGlueF9zeXN0ZW1zLkNsYW1VSS8zODU0NmUzOWJmOGYwZjMzNzYzZjBiMzk4OGI3ZWM4MS9pY29ucy8xMjh4MTI4L2lvLmdpdGh1Yi5saW54X3N5c3RlbXMuQ2xhbVVJLnBuZw",
     "tags": [
       "Sécurité",
       "Antivirus",
@@ -704,7 +704,7 @@
       "aur": "galaxybudsclient-bin"
     },
     "url": "https://github.com/timschneeb/GalaxyBudsClient",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://imgproxy.flathub.org/insecure/dpr:1/f:avif/q:100/rs:fit:128:128/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9tZS90aW1zY2huZWViZXJnZXIvR2FsYXh5QnVkc0NsaWVudC9iMTY0YzUzNzYyNGE3ZDVjZDNlYTdmMjhkYmNkNmRlYS9pY29ucy8xMjh4MTI4L21lLnRpbXNjaG5lZWJlcmdlci5HYWxheHlCdWRzQ2xpZW50LnBuZw",
     "tags": [
       "Audio",
       "Hardware"
@@ -724,7 +724,7 @@
       "apt": "gcolor3"
     },
     "url": "https://github.com/Hjdskes/gcolor3",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://imgproxy.flathub.org/insecure/dpr:1/f:avif/q:100/rs:fit:128:128/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9ubC9oamRza2VzL2djb2xvcjMvMWNkNzFlNDRlODE4ODlhZjNhNGQ4ZmNhMzYyYjk4MzQvaWNvbnMvMTI4eDEyOC9ubC5oamRza2VzLmdjb2xvcjMucG5n",
     "tags": [
       "Design",
       "Utilitaires"
@@ -770,7 +770,7 @@
       "winget": "UniversalDebloaterAlliance.UniversalAndroidDebloaterNextGeneration"
     },
     "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://avatars.githubusercontent.com/u/149629021?s=60&v=4",
     "tags": [
       "Android",
       "Système"
@@ -805,7 +805,7 @@
       "aur": "winboat-bin"
     },
     "url": "https://github.com/winboat-org/winboat",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/winboat-org/winboat/main/icons/winboat_logo.svg",
     "tags": [
       "Système",
       "Compatibilité"
@@ -823,7 +823,7 @@
     ],
     "packages": {},
     "url": "https://github.com/Hoferlukaslh/OpenUpTimeLab",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/Hoferlukaslh/OpenUpTimeLab/refs/heads/main/src/openuptimelab/assets/images/logo.png",
     "tags": [
       "Monitoring",
       "Homelab",
@@ -843,7 +843,7 @@
       "aur": "mission-center"
     },
     "url": "https://missioncenter.io",
-    "logo": "https://icon.horse/icon/missioncenter.io",
+    "logo": "https://imgproxy.flathub.org/insecure/dpr:1/f:avif/q:100/rs:fit:128:128/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9pby9taXNzaW9uY2VudGVyL01pc3Npb25DZW50ZXIvNzc5NGJiNTdhZmMwN2MwYWVlYWYxYTg4ZjkzZjBmNjIvaWNvbnMvMTI4eDEyOC9pby5taXNzaW9uY2VudGVyLk1pc3Npb25DZW50ZXIucG5n",
     "tags": [
       "Monitoring",
       "Desktop",
@@ -866,7 +866,7 @@
       "snap": "btop"
     },
     "url": "https://github.com/aristocratos/btop",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/aristocratos/btop/main/Img/logo.png",
     "tags": [
       "Monitoring",
       "CLI",
@@ -974,7 +974,7 @@
     ],
     "packages": {},
     "url": "https://github.com/MattParkerDev/SharpIDE",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://raw.githubusercontent.com/MattParkerDev/SharpIDE/main/src/SharpIDE.Godot/Resources/SharpIdeV3.svg",
     "tags": [
       "IDE",
       "C#",
@@ -1014,7 +1014,7 @@
     ],
     "packages": {},
     "url": "https://github.com/SteamClientHomebrew/Millennium",
-    "logo": "https://icon.horse/icon/github.com",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1280px-Steam_icon_logo.svg.png",
     "tags": [
       "Gaming",
       "Steam",

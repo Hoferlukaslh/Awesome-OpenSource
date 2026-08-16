@@ -18,6 +18,7 @@
             --tag-bg: #0f172a;
             --tag-text: #e2e8f0;
             --success: #10b981;
+            --warning: #f59e0b;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,6 +29,7 @@
             line-height: 1.6;
             padding: 2rem;
             min-height: 100vh;
+            position: relative;
         }
 
         header { text-align: center; margin-bottom: 2rem; }
@@ -37,6 +39,41 @@
             background: linear-gradient(to right, var(--accent), #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* --- ACTIONS RAPIDES (TOP LEFT) --- */
+        .user-quick-actions {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            z-index: 100;
+        }
+        .quick-action-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.2s;
+        }
+        .quick-action-item:hover { transform: translateY(-2px); }
+        .quick-action-icon { font-size: 1.8rem; }
+        .quick-action-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s; }
+        
+        @media (max-width: 1400px) {
+            .user-quick-actions {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            z-index: 100;
+        }
         }
 
         .search-container { max-width: 600px; margin: 0 auto 2rem auto; position: relative; }
@@ -49,62 +86,44 @@
         input[type="text"]:focus { border-color: var(--accent); }
 
         .filter-section { max-width: 1200px; margin: 0 auto 2rem auto; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
-        
-        /* En-tête cliquable du filtre */
-        .filter-header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 1.5rem; cursor: pointer; background-color: rgba(255,255,255,0.02);
-            transition: background-color 0.2s; user-select: none;
-        }
+        .filter-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; cursor: pointer; background-color: rgba(255,255,255,0.02); transition: background-color 0.2s; user-select: none; }
         .filter-header:hover { background-color: rgba(255,255,255,0.05); }
         .filter-header h2 { font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-main); font-weight: 600; margin: 0; }
         .filter-caret { transition: transform 0.3s; font-size: 1.2rem; color: var(--text-muted); }
         .filter-caret.open { transform: rotate(180deg); }
-
         .filter-body { padding: 0 1.5rem 1.5rem 1.5rem; display: block; }
         .filter-body.collapsed { display: none; }
-
         .filter-group { margin-top: 1rem; }
         .filter-group:first-child { margin-top: 0.5rem; }
         .filter-title { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
-        
         .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .filter-btn {
-            background-color: var(--bg-color); border: 1px solid var(--border); color: var(--text-muted);
-            padding: 0.4rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem;
-            transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; user-select: none;
-        }
+        .filter-btn { background-color: var(--bg-color); border: 1px solid var(--border); color: var(--text-muted); padding: 0.4rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; user-select: none; }
         .filter-btn:hover { border-color: var(--accent); color: var(--text-main); }
         .filter-btn.active { background-color: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 600; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; max-width: 1400px; margin: 0 auto; }
         
-        .card { background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s; }
+        /* --- CARD STYLES --- */
+        .card { position: relative; background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s; }
         .card:hover { transform: translateY(-4px); border-color: var(--accent); }
         
         .card-header { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
         .logo-img { width: 48px; height: 48px; border-radius: 10px; background: #fff; padding: 4px; object-fit: contain; }
-        
-        .card-title-group { flex-grow: 1; }
+        .card-title-group { flex-grow: 1; padding-right: 4rem; /* Évite que le texte passe sous les boutons */ }
         .card-title { font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.2rem; }
         .category { font-size: 0.75rem; text-transform: uppercase; color: var(--accent); font-weight: 600; }
         .license-badge { background: rgba(56,189,248,0.1); color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.75rem; white-space: nowrap; }
 
         .description { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 1rem; }
         
-        .meta-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
-
+        /* --- ALIGNEMENT CORRIGÉ POUR LES LABELS --- */
+        .meta-group { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem; }
+        .meta-row { display: flex; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap; }
+        .meta-label { font-size: 0.75rem; color: var(--text-muted); width: 60px; padding-top: 0.4rem; }
         
         .tag { background-color: #334155; color: #e2e8f0; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; border: 1px solid transparent; font-weight: 500; display: inline-flex; align-items: center; }
         
-        /* Style des boutons package (CLI) */
-        .pkg-tag { 
-            font-family: monospace; background: #334155; color: #cbd5e1; 
-            padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; 
-            cursor: pointer; border: 1px solid transparent; transition: all 0.2s;
-            display: inline-flex; align-items: center; gap: 0.3rem;
-            position: relative;
-        }
+        .pkg-tag { font-family: monospace; background: #334155; color: #cbd5e1; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
         .pkg-tag:hover { border-color: var(--accent); color: #fff; background: #475569; }
         .pkg-tag.copied { background: rgba(16, 185, 129, 0.2); border-color: var(--success); color: var(--success); }
 
@@ -112,34 +131,44 @@
         .btn-link { background-color: transparent; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 8px; transition: background-color 0.2s; }
         .btn-link:hover { background-color: rgba(56, 189, 248, 0.1); }
         
+        /* --- BOUTONS UTILISATEUR (TOP RIGHT DE LA CARTE) --- */
+        .user-actions {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            display: flex;
+            gap: 0.4rem;
+        }
+        .action-btn {
+            background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border); color: var(--text-muted);
+            border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.2s; font-size: 1.1rem;
+        }
+        .action-btn:hover { background: var(--bg-color); color: var(--text-main); border-color: var(--accent); }
+        .action-btn.active.btn-known { color: var(--warning); border-color: var(--warning); background: rgba(245, 158, 11, 0.1); }
+        .action-btn.active.btn-installed { color: var(--success); border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
+
         .empty-state, .error-state { grid-column: 1 / -1; text-align: center; padding: 4rem; color: var(--text-muted); }
         .empty-state i { font-size: 3rem; margin-bottom: 1rem; color: var(--border); }
         
-        /* Toast notification */
-        #toast {
-            visibility: hidden; min-width: 250px; background-color: var(--success); color: #000;
-            text-align: center; border-radius: 8px; padding: 12px; position: fixed; z-index: 1000;
-            left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            opacity: 0; transition: opacity 0.3s, bottom 0.3s;
-        }
+        #toast { visibility: hidden; min-width: 250px; background-color: var(--success); color: #000; text-align: center; border-radius: 8px; padding: 12px; position: fixed; z-index: 1000; left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.3); opacity: 0; transition: opacity 0.3s, bottom 0.3s; }
         #toast.show { visibility: visible; opacity: 1; bottom: 50px; }
-
-        .meta-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .meta-label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            width: 80px;
-            padding-top: 0.35rem; /* Aligne parfaitement le texte du label avec la première ligne de badges */
-        }
     </style>
 </head>
 <body>
+
+    <!-- Actions Rapides (Filtres Utilisateur) -->
+    <div class="user-quick-actions">
+        <div class="quick-action-item" onclick="cycleFilter('known')" title="Filtre : Connu">
+            <i id="icon-known" class="ph ph-eye quick-action-icon" style="color: var(--text-muted);"></i>
+            <span id="text-known" class="quick-action-label" style="color: var(--text-muted);">Tous</span>
+        </div>
+        <div class="quick-action-item" onclick="cycleFilter('installed')" title="Filtre : Installé">
+            <i id="icon-installed" class="ph ph-check-circle quick-action-icon" style="color: var(--text-muted);"></i>
+            <span id="text-installed" class="quick-action-label" style="color: var(--text-muted);">Tous</span>
+        </div>
+    </div>
+
 
     <header>
         <h1>Awesome OpenSource</h1>
@@ -151,10 +180,9 @@
         <input type="text" id="searchInput" placeholder="Rechercher par nom ou description...">
     </div>
 
-    <!-- Filtres repliables -->
     <div class="filter-section">
         <div class="filter-header" onclick="toggleFilters()">
-            <h2><i class="ph ph-faders"></i> Filtres</h2>
+            <h2><i class="ph ph-faders"></i> Filtres Catégories & Plateformes</h2>
             <i class="ph ph-caret-down filter-caret open" id="filterCaret"></i>
         </div>
         <div class="filter-body" id="filterBody">
@@ -182,86 +210,128 @@
 
     <script>
         let allData = [];
-        let filters = {
-            platforms: new Set(),
-            packages: new Set(),
-            licenses: new Set(),
-            tags: new Set()
-        };
+        let filters = { platforms: new Set(), packages: new Set(), licenses: new Set(), tags: new Set() };
+        
+        // Données Utilisateur (Cookies)
+        let userStats = { known: [], installed: [] };
+        let userFilters = { known: 'all', installed: 'all' };
 
         const grid = document.getElementById('softwareGrid');
+        const platformIcons = { "Web": "ph-globe", "Linux": "ph-linux-logo", "Windows": "ph-windows-logo", "macOS": "ph-apple-logo", "Android": "ph-android-logo", "iOS": "ph-device-mobile" };
+
         
-        const platformIcons = {
-            "Web": "ph-globe", "Linux": "ph-linux-logo", "Windows": "ph-windows-logo", 
-            "macOS": "ph-apple-logo", "Android": "ph-android-logo", "iOS": "ph-device-mobile"
+        const filterStatesConf = {
+            'known': {
+                'all': { text: 'Tous', icon: 'ph ph-eye', color: 'var(--text-muted)' },
+                'only': { text: 'Inclus', icon: 'ph-fill ph-eye', color: 'var(--warning)' },
+                'exclude': { text: 'Exclus', icon: 'ph ph-eye-slash', color: '#ef4444' }
+            },
+            'installed': {
+                'all': { text: 'Tous', icon: 'ph ph-check-circle', color: 'var(--text-muted)' },
+                'only': { text: 'Inclus', icon: 'ph-fill ph-check-circle', color: 'var(--success)' },
+                'exclude': { text: 'Exclus', icon: 'ph ph-x-circle', color: '#ef4444' }
+            }
         };
 
-        // Gestion de l'ouverture/fermeture des filtres
-        function toggleFilters() {
-            const body = document.getElementById('filterBody');
-            const caret = document.getElementById('filterCaret');
-            body.classList.toggle('collapsed');
-            caret.classList.toggle('open');
+        function cycleFilter(type) {
+            const sequence = ['all', 'only', 'exclude'];
+            let current = userFilters[type];
+            let nextIndex = (sequence.indexOf(current) + 1) % sequence.length;
+            userFilters[type] = sequence[nextIndex];
+            
+            let conf = filterStatesConf[type][userFilters[type]];
+            let iconEl = document.getElementById('icon-' + type);
+            let textEl = document.getElementById('text-' + type);
+            iconEl.className = conf.icon + ' quick-action-icon';
+            iconEl.style.color = conf.color;
+            textEl.innerText = conf.text;
+            textEl.style.color = conf.color;
+            
+            applyFilters();
         }
 
-        // Générateur de commande CLI en fonction du package manager
+                // --- GESTION DES COOKIES ---
+        function loadUserStats() {
+            const match = document.cookie.match(/(^| )userStats=([^;]+)/);
+            if (match) {
+                try { userStats = JSON.parse(decodeURIComponent(match[2])); } 
+                catch(e) { console.error("Erreur lecture cookies", e); }
+            }
+        }
+        function saveUserStats() {
+            document.cookie = "userStats=" + encodeURIComponent(JSON.stringify(userStats)) + "; max-age=" + (60*60*24*365) + "; path=/";
+        }
+        function toggleUserStat(type, appName) {
+            const list = userStats[type];
+            const index = list.indexOf(appName);
+            if(index > -1) list.splice(index, 1);
+            else list.push(appName);
+            saveUserStats();
+            applyFilters(); 
+        }
+
+        function toggleFilters() {
+            document.getElementById('filterBody').classList.toggle('collapsed');
+            document.getElementById('filterCaret').classList.toggle('open');
+        }
+
         function getInstallCommand(manager, pkgName) {
             const commands = {
-                'apt': `sudo apt install ${pkgName}`,
-                'pacman': `sudo pacman -S ${pkgName}`,
-                'aur': `yay -S ${pkgName}`,
-                'dnf': `sudo dnf install ${pkgName}`,
-                'snap': `sudo snap install ${pkgName}`,
-                'flatpak': `flatpak install ${pkgName}`,
-                'docker': `docker pull ${pkgName}`,
-                'winget': `winget install ${pkgName}`,
-                'chocolatey': `choco install ${pkgName}`,
-                'scoop': `scoop install ${pkgName}`
+                'apt': `sudo apt install ${pkgName}`, 'pacman': `sudo pacman -S ${pkgName}`, 'aur': `yay -S ${pkgName}`,
+                'dnf': `sudo dnf install ${pkgName}`, 'snap': `sudo snap install ${pkgName}`, 'flatpak': `flatpak install ${pkgName}`,
+                'docker': `docker pull ${pkgName}`, 'winget': `winget install ${pkgName}`, 'chocolatey': `choco install ${pkgName}`, 'scoop': `scoop install ${pkgName}`
             };
             return commands[manager] || `${manager} install ${pkgName}`;
         }
 
-        // Fonction de copie
+        // --- COPIE ROBUSTE AVEC FALLBACK ---
         function copyToClipboard(cmd, element) {
-            navigator.clipboard.writeText(cmd).then(() => {
-                const originalHTML = element.innerHTML;
-                element.classList.add('copied');
-                element.innerHTML = `<i class="ph ph-check-circle"></i> Copié`;
-                
-                showToast();
-
-                setTimeout(() => {
-                    element.classList.remove('copied');
-                    element.innerHTML = originalHTML;
-                }, 2000);
-            }).catch(err => {
-                console.error('Erreur de copie:', err);
-                alert('Impossible de copier la commande.');
-            });
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(cmd).then(() => {
+                    showSuccessCopy(element);
+                }).catch(err => fallbackCopy(cmd, element));
+            } else {
+                fallbackCopy(cmd, element);
+            }
         }
 
-        function showToast() {
+        function fallbackCopy(cmd, element) {
+            try {
+                const textArea = document.createElement("textarea");
+                textArea.value = cmd;
+                textArea.style.top = "0"; textArea.style.left = "0"; textArea.style.position = "fixed";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                if(successful) showSuccessCopy(element);
+                else alert('Copie automatique impossible sur ce réseau. La commande est : ' + cmd);
+            } catch (err) {
+                alert('Copie impossible sur ce navigateur.');
+            }
+        }
+
+        function showSuccessCopy(element) {
+            const originalHTML = element.innerHTML;
+            element.classList.add('copied'); element.innerHTML = `<i class="ph ph-check-circle"></i> Copié`;
             const toast = document.getElementById("toast");
             toast.className = "show";
             setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 2500);
+            setTimeout(() => { element.classList.remove('copied'); element.innerHTML = originalHTML; }, 2000);
         }
 
         async function loadData() {
+            loadUserStats();
             try {
                 const response = await fetch('./awesome_opensource.json');
-                if (!response.ok) throw new Error('Fichier JSON non trouvé');
+                if (!response.ok) throw new Error('JSON introuvable');
                 allData = await response.json();
                 
-                let uniquePlatforms = new Set();
-                let uniquePackages = new Set();
-                let uniqueLicenses = new Set();
-                let uniqueTags = new Set();
-
+                let uniquePlatforms = new Set(), uniquePackages = new Set(), uniqueLicenses = new Set(), uniqueTags = new Set();
                 allData.forEach(item => {
                     item.platforms.forEach(p => uniquePlatforms.add(p));
-                    if(item.packages) {
-                        Object.keys(item.packages).forEach(p => uniquePackages.add(p));
-                    }
+                    if(item.packages) Object.keys(item.packages).forEach(p => uniquePackages.add(p));
                     uniqueLicenses.add(item.license);
                     item.tags.forEach(t => uniqueTags.add(t));
                     uniqueTags.add(item.category);
@@ -271,34 +341,24 @@
                 renderFilters('packageFilters', uniquePackages, 'packages');
                 renderFilters('licenseFilters', uniqueLicenses, 'licenses');
                 renderFilters('tagFilters', uniqueTags, 'tags');
-
-                renderCards(allData);
+                applyFilters();
             } catch (error) {
-                grid.innerHTML = `<div class="error-state"><h3>Erreur (CORS)</h3><p>Veuillez lancer un serveur local (ex: python3 -m http.server).</p></div>`;
+                grid.innerHTML = `<div class="error-state"><h3>Erreur</h3><p>Impossible de charger awesome_opensource.json</p></div>`;
             }
         }
 
         function renderFilters(containerId, dataSet, filterType, iconMap = null) {
             const container = document.getElementById(containerId);
             const sortedData = Array.from(dataSet).sort();
-            
             container.innerHTML = sortedData.map(item => {
                 let iconHtml = iconMap && iconMap[item] ? `<i class="ph ${iconMap[item]}"></i> ` : '';
                 return `<div class="filter-btn" data-type="${filterType}" data-value="${item}">${iconHtml}${item}</div>`;
             }).join('');
-
             container.querySelectorAll('.filter-btn').forEach(el => {
                 el.addEventListener('click', (e) => {
-                    const type = e.currentTarget.dataset.type;
-                    const value = e.currentTarget.dataset.value;
-                    
-                    if (filters[type].has(value)) {
-                        filters[type].delete(value);
-                        e.currentTarget.classList.remove('active');
-                    } else {
-                        filters[type].add(value);
-                        e.currentTarget.classList.add('active');
-                    }
+                    const type = e.currentTarget.dataset.type, value = e.currentTarget.dataset.value;
+                    if (filters[type].has(value)) { filters[type].delete(value); e.currentTarget.classList.remove('active'); } 
+                    else { filters[type].add(value); e.currentTarget.classList.add('active'); }
                     applyFilters();
                 });
             });
@@ -306,7 +366,6 @@
 
         function applyFilters() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            
             const filtered = allData.filter(item => {
                 const matchesSearch = item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm);
                 
@@ -316,15 +375,20 @@
                 const matchesLicenses = filters.licenses.size === 0 || filters.licenses.has(item.license);
                 const matchesTags = filters.tags.size === 0 || Array.from(filters.tags).every(t => item.tags.includes(t) || item.category === t);
 
-                return matchesSearch && matchesPlatforms && matchesPackages && matchesLicenses && matchesTags;
-            });
+                let matchesKnown = true;
+                if (userFilters.known === 'only') matchesKnown = userStats.known.includes(item.name);
+                else if (userFilters.known === 'exclude') matchesKnown = !userStats.known.includes(item.name);
 
+                let matchesInstalled = true;
+                if (userFilters.installed === 'only') matchesInstalled = userStats.installed.includes(item.name);
+                else if (userFilters.installed === 'exclude') matchesInstalled = !userStats.installed.includes(item.name);
+
+                return matchesSearch && matchesPlatforms && matchesPackages && matchesLicenses && matchesTags && matchesKnown && matchesInstalled;
+            });
             renderCards(filtered);
         }
 
-        function getPlatformIcons(platforms) {
-            return platforms.map(p => `<i class="ph ${platformIcons[p] || 'ph-desktop'}" title="${p}"></i>`).join(' ');
-        }
+        function getPlatformIcons(platforms) { return platforms.map(p => `<i class="ph ${platformIcons[p] || 'ph-desktop'}" title="${p}"></i>`).join(' '); }
 
         function renderCards(data) {
             if (data.length === 0) {
@@ -334,22 +398,34 @@
 
             grid.innerHTML = data.map(item => {
                 const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=334155&color=fff&size=128`;
+                const safeName = item.name.replace(/"/g, '&quot;');
                 
-                // Génération des badges de paquets interactifs
+                const isKnown = userStats.known.includes(item.name);
+                const isInstalled = userStats.installed.includes(item.name);
+                
                 let packagesHtml = '<span class="text-muted">-</span>';
                 if (item.packages && Object.keys(item.packages).length > 0) {
                     packagesHtml = Object.entries(item.packages).map(([manager, pkgName]) => {
                         const cmd = getInstallCommand(manager, pkgName);
-                        // Échapper les apostrophes pour le onclick
-                        const safeCmd = cmd.replace(/'/g, "\'"); 
-                        return `<span class="pkg-tag" title="Clic = Copier : ${safeCmd}" onclick="copyToClipboard('${safeCmd}', this)">
+                        const safeCmd = cmd.replace(/"/g, '&quot;'); 
+                        return `<span class="pkg-tag" title="Clic = Copier" data-cmd="${safeCmd}" onclick="copyToClipboard(this.dataset.cmd, this)">
                                     <i class="ph ph-copy"></i> ${manager}
                                 </span>`;
                     }).join('');
                 }
 
+                // CORRECTION DES CLASSES D'ICÔNES ET ATTRIBUT DATA-NAME
                 return `
                 <div class="card">
+                    <div class="user-actions">
+                        <button class="action-btn btn-known ${isKnown ? 'active' : ''}" data-name="${safeName}" onclick="toggleUserStat('known', this.dataset.name)" title="Je connais">
+                            <i class="${isKnown ? 'ph-fill' : 'ph'} ph-eye"></i>
+                        </button>
+                        <button class="action-btn btn-installed ${isInstalled ? 'active' : ''}" data-name="${safeName}" onclick="toggleUserStat('installed', this.dataset.name)" title="Installé">
+                            <i class="${isInstalled ? 'ph-fill' : 'ph'} ph-check-circle"></i>
+                        </button>
+                    </div>
+
                     <div class="card-header">
                         <img src="${item.logo}" alt="Logo" class="logo-img" onerror="this.onerror=null;this.src='${fallbackImage}';">
                         <div class="card-title-group">
@@ -391,7 +467,6 @@
         }
 
         document.getElementById('searchInput').addEventListener('input', applyFilters);
-
         loadData();
     </script>
 </body>
