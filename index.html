@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome OpenSource Collection</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+            --tag-bg: #0f172a;
+            --tag-text: #e2e8f0;
+            --success: #10b981;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        header { text-align: center; margin-bottom: 2rem; }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent), #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-container { max-width: 600px; margin: 0 auto 2rem auto; position: relative; }
+        .search-container i { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.2rem; }
+        input[type="text"] {
+            width: 100%; padding: 1rem 1rem 1rem 3rem; border-radius: 9999px;
+            border: 1px solid var(--border); background-color: var(--bg-card); color: var(--text-main);
+            font-size: 1rem; outline: none; transition: border-color 0.3s;
+        }
+        input[type="text"]:focus { border-color: var(--accent); }
+
+        .filter-section { max-width: 1200px; margin: 0 auto 2rem auto; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
+        
+        /* En-tête cliquable du filtre */
+        .filter-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 1.5rem; cursor: pointer; background-color: rgba(255,255,255,0.02);
+            transition: background-color 0.2s; user-select: none;
+        }
+        .filter-header:hover { background-color: rgba(255,255,255,0.05); }
+        .filter-header h2 { font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-main); font-weight: 600; margin: 0; }
+        .filter-caret { transition: transform 0.3s; font-size: 1.2rem; color: var(--text-muted); }
+        .filter-caret.open { transform: rotate(180deg); }
+
+        .filter-body { padding: 0 1.5rem 1.5rem 1.5rem; display: block; }
+        .filter-body.collapsed { display: none; }
+
+        .filter-group { margin-top: 1rem; }
+        .filter-group:first-child { margin-top: 0.5rem; }
+        .filter-title { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+        
+        .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .filter-btn {
+            background-color: var(--bg-color); border: 1px solid var(--border); color: var(--text-muted);
+            padding: 0.4rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem;
+            transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; user-select: none;
+        }
+        .filter-btn:hover { border-color: var(--accent); color: var(--text-main); }
+        .filter-btn.active { background-color: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 600; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; max-width: 1400px; margin: 0 auto; }
+        
+        .card { background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s; }
+        .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+        
+        .card-header { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
+        .logo-img { width: 48px; height: 48px; border-radius: 10px; background: #fff; padding: 4px; object-fit: contain; }
+        
+        .card-title-group { flex-grow: 1; }
+        .card-title { font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.2rem; }
+        .category { font-size: 0.75rem; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+        .license-badge { background: rgba(56,189,248,0.1); color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.75rem; white-space: nowrap; }
+
+        .description { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 1rem; }
+        
+        .meta-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+
+        
+        .tag { background-color: #334155; color: #e2e8f0; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; border: 1px solid transparent; font-weight: 500; display: inline-flex; align-items: center; }
+        
+        /* Style des boutons package (CLI) */
+        .pkg-tag { 
+            font-family: monospace; background: #334155; color: #cbd5e1; 
+            padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; 
+            cursor: pointer; border: 1px solid transparent; transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            position: relative;
+        }
+        .pkg-tag:hover { border-color: var(--accent); color: #fff; background: #475569; }
+        .pkg-tag.copied { background: rgba(16, 185, 129, 0.2); border-color: var(--success); color: var(--success); }
+
+        .card-footer { display: flex; justify-content: flex-end; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border); }
+        .btn-link { background-color: transparent; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 8px; transition: background-color 0.2s; }
+        .btn-link:hover { background-color: rgba(56, 189, 248, 0.1); }
+        
+        .empty-state, .error-state { grid-column: 1 / -1; text-align: center; padding: 4rem; color: var(--text-muted); }
+        .empty-state i { font-size: 3rem; margin-bottom: 1rem; color: var(--border); }
+        
+        /* Toast notification */
+        #toast {
+            visibility: hidden; min-width: 250px; background-color: var(--success); color: #000;
+            text-align: center; border-radius: 8px; padding: 12px; position: fixed; z-index: 1000;
+            left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            opacity: 0; transition: opacity 0.3s, bottom 0.3s;
+        }
+        #toast.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+        .meta-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            width: 80px;
+            padding-top: 0.35rem; /* Aligne parfaitement le texte du label avec la première ligne de badges */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Awesome OpenSource</h1>
+        <p style="color: var(--text-muted);">Trouvez et installez les meilleurs logiciels open source en un clic.</p>
+    </header>
+
+    <div class="search-container">
+        <i class="ph ph-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Rechercher par nom ou description...">
+    </div>
+
+    <!-- Filtres repliables -->
+    <div class="filter-section">
+        <div class="filter-header" onclick="toggleFilters()">
+            <h2><i class="ph ph-faders"></i> Filtres</h2>
+            <i class="ph ph-caret-down filter-caret open" id="filterCaret"></i>
+        </div>
+        <div class="filter-body" id="filterBody">
+            <div class="filter-group">
+                <div class="filter-title"><i class="ph ph-desktop"></i> Plateformes</div>
+                <div class="filters" id="platformFilters"></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-title"><i class="ph ph-terminal-window"></i> Gestionnaires de paquets</div>
+                <div class="filters" id="packageFilters"></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-title"><i class="ph ph-certificate"></i> Licences</div>
+                <div class="filters" id="licenseFilters"></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-title"><i class="ph ph-tag"></i> Tags & Catégories</div>
+                <div class="filters" id="tagFilters"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid" id="softwareGrid"></div>
+    <div id="toast">Copié dans le presse-papier !</div>
+
+    <script>
+        let allData = [];
+        let filters = {
+            platforms: new Set(),
+            packages: new Set(),
+            licenses: new Set(),
+            tags: new Set()
+        };
+
+        const grid = document.getElementById('softwareGrid');
+        
+        const platformIcons = {
+            "Web": "ph-globe", "Linux": "ph-linux-logo", "Windows": "ph-windows-logo", 
+            "macOS": "ph-apple-logo", "Android": "ph-android-logo", "iOS": "ph-device-mobile"
+        };
+
+        // Gestion de l'ouverture/fermeture des filtres
+        function toggleFilters() {
+            const body = document.getElementById('filterBody');
+            const caret = document.getElementById('filterCaret');
+            body.classList.toggle('collapsed');
+            caret.classList.toggle('open');
+        }
+
+        // Générateur de commande CLI en fonction du package manager
+        function getInstallCommand(manager, pkgName) {
+            const commands = {
+                'apt': `sudo apt install ${pkgName}`,
+                'pacman': `sudo pacman -S ${pkgName}`,
+                'aur': `yay -S ${pkgName}`,
+                'dnf': `sudo dnf install ${pkgName}`,
+                'snap': `sudo snap install ${pkgName}`,
+                'flatpak': `flatpak install ${pkgName}`,
+                'docker': `docker pull ${pkgName}`,
+                'winget': `winget install ${pkgName}`,
+                'chocolatey': `choco install ${pkgName}`,
+                'scoop': `scoop install ${pkgName}`
+            };
+            return commands[manager] || `${manager} install ${pkgName}`;
+        }
+
+        // Fonction de copie
+        function copyToClipboard(cmd, element) {
+            navigator.clipboard.writeText(cmd).then(() => {
+                const originalHTML = element.innerHTML;
+                element.classList.add('copied');
+                element.innerHTML = `<i class="ph ph-check-circle"></i> Copié`;
+                
+                showToast();
+
+                setTimeout(() => {
+                    element.classList.remove('copied');
+                    element.innerHTML = originalHTML;
+                }, 2000);
+            }).catch(err => {
+                console.error('Erreur de copie:', err);
+                alert('Impossible de copier la commande.');
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.className = "show";
+            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 2500);
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch('./awesome_opensource.json');
+                if (!response.ok) throw new Error('Fichier JSON non trouvé');
+                allData = await response.json();
+                
+                let uniquePlatforms = new Set();
+                let uniquePackages = new Set();
+                let uniqueLicenses = new Set();
+                let uniqueTags = new Set();
+
+                allData.forEach(item => {
+                    item.platforms.forEach(p => uniquePlatforms.add(p));
+                    if(item.packages) {
+                        Object.keys(item.packages).forEach(p => uniquePackages.add(p));
+                    }
+                    uniqueLicenses.add(item.license);
+                    item.tags.forEach(t => uniqueTags.add(t));
+                    uniqueTags.add(item.category);
+                });
+
+                renderFilters('platformFilters', uniquePlatforms, 'platforms', platformIcons);
+                renderFilters('packageFilters', uniquePackages, 'packages');
+                renderFilters('licenseFilters', uniqueLicenses, 'licenses');
+                renderFilters('tagFilters', uniqueTags, 'tags');
+
+                renderCards(allData);
+            } catch (error) {
+                grid.innerHTML = `<div class="error-state"><h3>Erreur (CORS)</h3><p>Veuillez lancer un serveur local (ex: python3 -m http.server).</p></div>`;
+            }
+        }
+
+        function renderFilters(containerId, dataSet, filterType, iconMap = null) {
+            const container = document.getElementById(containerId);
+            const sortedData = Array.from(dataSet).sort();
+            
+            container.innerHTML = sortedData.map(item => {
+                let iconHtml = iconMap && iconMap[item] ? `<i class="ph ${iconMap[item]}"></i> ` : '';
+                return `<div class="filter-btn" data-type="${filterType}" data-value="${item}">${iconHtml}${item}</div>`;
+            }).join('');
+
+            container.querySelectorAll('.filter-btn').forEach(el => {
+                el.addEventListener('click', (e) => {
+                    const type = e.currentTarget.dataset.type;
+                    const value = e.currentTarget.dataset.value;
+                    
+                    if (filters[type].has(value)) {
+                        filters[type].delete(value);
+                        e.currentTarget.classList.remove('active');
+                    } else {
+                        filters[type].add(value);
+                        e.currentTarget.classList.add('active');
+                    }
+                    applyFilters();
+                });
+            });
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            const filtered = allData.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm);
+                
+                const matchesPlatforms = filters.platforms.size === 0 || Array.from(filters.platforms).every(p => item.platforms.includes(p));
+                const itemPackages = item.packages ? Object.keys(item.packages) : [];
+                const matchesPackages = filters.packages.size === 0 || Array.from(filters.packages).every(p => itemPackages.includes(p));
+                const matchesLicenses = filters.licenses.size === 0 || filters.licenses.has(item.license);
+                const matchesTags = filters.tags.size === 0 || Array.from(filters.tags).every(t => item.tags.includes(t) || item.category === t);
+
+                return matchesSearch && matchesPlatforms && matchesPackages && matchesLicenses && matchesTags;
+            });
+
+            renderCards(filtered);
+        }
+
+        function getPlatformIcons(platforms) {
+            return platforms.map(p => `<i class="ph ${platformIcons[p] || 'ph-desktop'}" title="${p}"></i>`).join(' ');
+        }
+
+        function renderCards(data) {
+            if (data.length === 0) {
+                grid.innerHTML = `<div class="empty-state"><i class="ph ph-ghost"></i><h3>Aucun résultat</h3></div>`;
+                return;
+            }
+
+            grid.innerHTML = data.map(item => {
+                const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=334155&color=fff&size=128`;
+                
+                // Génération des badges de paquets interactifs
+                let packagesHtml = '<span class="text-muted">-</span>';
+                if (item.packages && Object.keys(item.packages).length > 0) {
+                    packagesHtml = Object.entries(item.packages).map(([manager, pkgName]) => {
+                        const cmd = getInstallCommand(manager, pkgName);
+                        // Échapper les apostrophes pour le onclick
+                        const safeCmd = cmd.replace(/'/g, "\'"); 
+                        return `<span class="pkg-tag" title="Clic = Copier : ${safeCmd}" onclick="copyToClipboard('${safeCmd}', this)">
+                                    <i class="ph ph-copy"></i> ${manager}
+                                </span>`;
+                    }).join('');
+                }
+
+                return `
+                <div class="card">
+                    <div class="card-header">
+                        <img src="${item.logo}" alt="Logo" class="logo-img" onerror="this.onerror=null;this.src='${fallbackImage}';">
+                        <div class="card-title-group">
+                            <div class="category">${item.category}</div>
+                            <div class="card-title">${item.name}</div>
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <div style="color: var(--text-muted); font-size: 1.1rem;">
+                                    ${getPlatformIcons(item.platforms)}
+                                </div>
+                                <span class="license-badge">${item.license}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="description">${item.description}</div>
+                    
+                    <div class="meta-group">
+                        <div class="meta-row">
+                            <span class="meta-label">Tags</span>
+                            <div style="display:flex; gap:0.4rem; flex-wrap:wrap; flex:1;">
+                                ${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+                            </div>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-label">Install</span>
+                            <div style="display:flex; gap:0.4rem; flex-wrap:wrap; flex:1;">
+                                ${packagesHtml}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="${item.url}" target="_blank" class="btn-link">
+                            Site web <i class="ph ph-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+        loadData();
+    </script>
+</body>
+</html>

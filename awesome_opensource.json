@@ -1,0 +1,1049 @@
+[
+  {
+    "name": "Nextcloud",
+    "category": "Cloud & Serveur",
+    "description": "Plateforme de cloud personnel et de collaboration.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "docker": "nextcloud:latest",
+      "pacman": "nextcloud-client",
+      "apt": "nextcloud-desktop",
+      "flatpak": "com.nextcloud.desktopclient.nextcloud",
+      "snap": "nextcloud",
+      "winget": "Nextcloud.NextcloudDesktop",
+      "chocolatey": "nextcloud-client",
+      "scoop": "nextcloud"
+    },
+    "url": "https://nextcloud.com",
+    "logo": "https://icon.horse/icon/nextcloud.com",
+    "tags": [
+      "Cloud",
+      "Self-Hosted",
+      "Collaboration"
+    ]
+  },
+  {
+    "name": "Immich",
+    "category": "Cloud & Serveur",
+    "description": "Solution auto-hébergée de gestion de photos et vidéos hautes performances.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "docker": "ghcr.io/immich-app/immich-server:release"
+    },
+    "url": "https://immich.app",
+    "logo": "https://icon.horse/icon/immich.app",
+    "tags": [
+      "Photos",
+      "Self-Hosted",
+      "Sauvegarde"
+    ]
+  },
+  {
+    "name": "Glance",
+    "category": "Cloud & Serveur",
+    "description": "Tableau de bord auto-hébergé pour vos flux RSS et widgets.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "glanceapp/glance"
+    },
+    "url": "https://github.com/glanceapp/glance",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Dashboard",
+      "Self-Hosted",
+      "RSS"
+    ]
+  },
+  {
+    "name": "Penpot",
+    "category": "Cloud & Serveur",
+    "description": "Plateforme de design UI/UX open source.",
+    "license": "MPL-2.0",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "penpotapp/frontend:latest"
+    },
+    "url": "https://penpot.app",
+    "logo": "https://icon.horse/icon/penpot.app",
+    "tags": [
+      "Design",
+      "UI/UX",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "name": "Trek",
+    "category": "Cloud & Serveur",
+    "description": "Planificateur de voyage auto-hébergé avec cartes interactives.",
+    "license": "MIT",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "mauriceboe/trek:latest"
+    },
+    "url": "https://github.com/liketrek/TREK",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Voyage",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "name": "NetAlertX",
+    "category": "Cloud & Serveur",
+    "description": "Scanner de réseau et système de notification d'intrusion.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "ghcr.io/netalertx/netalertx:latest"
+    },
+    "url": "https://netalertx.com",
+    "logo": "https://icon.horse/icon/netalertx.com",
+    "tags": [
+      "Réseau",
+      "Sécurité",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "name": "MariaDB",
+    "category": "Cloud & Serveur",
+    "description": "Système de gestion de base de données relationnelle.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "docker": "mariadb:latest",
+      "pacman": "mariadb",
+      "apt": "mariadb-server",
+      "dnf": "mariadb-server",
+      "winget": "MariaDB.Server",
+      "chocolatey": "mariadb"
+    },
+    "url": "https://mariadb.org",
+    "logo": "https://icon.horse/icon/mariadb.org",
+    "tags": [
+      "Base de données",
+      "Serveur"
+    ]
+  },
+  {
+    "name": "phpMyAdmin",
+    "category": "Cloud & Serveur",
+    "description": "Outil d'administration pour MySQL/MariaDB.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "phpmyadmin:latest",
+      "apt": "phpmyadmin",
+      "pacman": "phpmyadmin"
+    },
+    "url": "https://www.phpmyadmin.net",
+    "logo": "https://icon.horse/icon/phpmyadmin.net",
+    "tags": [
+      "Base de données",
+      "Serveur",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "name": "Trivy",
+    "category": "Cloud & Serveur",
+    "description": "Scanner de vulnérabilités pour conteneurs.",
+    "license": "Apache-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "docker": "aquasec/trivy",
+      "aur": "trivy-bin",
+      "apt": "trivy",
+      "dnf": "trivy",
+      "winget": "AquaSecurity.Trivy",
+      "scoop": "trivy"
+    },
+    "url": "https://aquasecurity.github.io/trivy/",
+    "logo": "https://icon.horse/icon/aquasecurity.github.io",
+    "tags": [
+      "Sécurité",
+      "DevSecOps",
+      "CLI"
+    ]
+  },
+  {
+    "name": "Nginx UI",
+    "category": "Cloud & Serveur",
+    "description": "Interface web pour la gestion de Nginx.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "0xjacky/nginx-ui",
+      "aur": "nginx-ui-bin"
+    },
+    "url": "https://github.com/0xJacky/nginx-ui",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Serveur",
+      "Self-Hosted",
+      "Proxy"
+    ]
+  },
+  {
+    "name": "Silo-Server",
+    "category": "Cloud & Serveur",
+    "description": "Serveur de streaming multimédia Go compatible Jellyfin.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "packages": {
+      "docker": "siloserver/silo-server"
+    },
+    "url": "https://github.com/Silo-Server/silo-server",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Multimédia",
+      "Self-Hosted",
+      "Streaming"
+    ]
+  },
+  {
+    "name": "OBS Studio",
+    "category": "Multimédia",
+    "description": "Enregistrement vidéo et streaming en direct.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "obs-studio",
+      "apt": "obs-studio",
+      "dnf": "obs-studio",
+      "flatpak": "com.obsproject.Studio",
+      "snap": "obs-studio",
+      "winget": "OBSProject.OBSStudio"
+    },
+    "url": "https://obsproject.com",
+    "logo": "https://icon.horse/icon/obsproject.com",
+    "tags": [
+      "Vidéo",
+      "Streaming",
+      "Desktop"
+    ]
+  },
+  {
+    "name": "yt-dlp",
+    "category": "Multimédia",
+    "description": "Téléchargeur audio/vidéo en ligne de commande.",
+    "license": "Unlicense",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "yt-dlp",
+      "apt": "yt-dlp",
+      "dnf": "yt-dlp",
+      "winget": "yt-dlp.yt-dlp",
+      "scoop": "yt-dlp"
+    },
+    "url": "https://github.com/yt-dlp/yt-dlp",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "CLI",
+      "Vidéo",
+      "Utilitaires"
+    ]
+  },
+  {
+    "name": "yt-dlp-webui",
+    "category": "Multimédia",
+    "description": "Interface web pour yt-dlp.",
+    "license": "MIT",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "marcobaobao/yt-dlp-webui"
+    },
+    "url": "https://github.com/marcobaobao/yt-dlp-webui",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Web",
+      "Self-Hosted",
+      "Vidéo"
+    ]
+  },
+  {
+    "name": "Jellyfin",
+    "category": "Multimédia",
+    "description": "Système de streaming média libre (Server & Desktop).",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Web",
+      "Android"
+    ],
+    "packages": {
+      "docker": "jellyfin/jellyfin",
+      "flatpak": "org.jellyfin.JellyfinDesktop",
+      "aur": "jellyfin-bin",
+      "winget": "Jellyfin.Jellyfin"
+    },
+    "url": "https://jellyfin.org",
+    "logo": "https://icon.horse/icon/jellyfin.org",
+    "tags": [
+      "Multimédia",
+      "Self-Hosted",
+      "Streaming"
+    ]
+  },
+  {
+    "name": "Fladder",
+    "category": "Multimédia",
+    "description": "Frontend Jellyfin multiplateforme conçu en Flutter.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "Android"
+    ],
+    "packages": {
+      "flatpak": "nl.jknaapen.fladder"
+    },
+    "url": "https://github.com/DonutWare/Fladder",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Multimédia",
+      "Streaming",
+      "Frontend"
+    ]
+  },
+  {
+    "name": "Clapshot",
+    "category": "Multimédia",
+    "description": "Outil web collaboratif pour la révision vidéo.",
+    "license": "MIT",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "elonen/clapshot"
+    },
+    "url": "https://github.com/elonen/clapshot",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Vidéo",
+      "Self-Hosted",
+      "Collaboration"
+    ]
+  },
+  {
+    "name": "PhotoGIMP",
+    "category": "Multimédia",
+    "description": "Un patch pour GIMP afin d'offrir une expérience similaire à Photoshop.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "packages": {},
+    "url": "https://github.com/Diolinux/PhotoGIMP",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Image",
+      "Design",
+      "Plugin"
+    ]
+  },
+  {
+    "name": "RapidRAW",
+    "category": "Multimédia",
+    "description": "Éditeur d'images RAW accéléré par GPU.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "aur": "rapidraw-bin"
+    },
+    "url": "https://github.com/CyberTimon/RapidRAW",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Image",
+      "Photographie"
+    ]
+  },
+  {
+    "name": "xl-converter",
+    "category": "Multimédia",
+    "description": "Convertisseur d'images pour les formats modernes (JPEG XL, AVIF).",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "packages": {
+      "aur": "xl-converter"
+    },
+    "url": "https://github.com/JacobDev1/xl-converter",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Image",
+      "Conversion"
+    ]
+  },
+  {
+    "name": "fooyin",
+    "category": "Multimédia",
+    "description": "Un lecteur de musique hautement personnalisable.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "packages": {
+      "aur": "fooyin",
+      "flatpak": "org.fooyin.fooyin"
+    },
+    "url": "https://github.com/fooyin/fooyin",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Audio",
+      "Musique",
+      "Desktop"
+    ]
+  },
+  {
+    "name": "ImageMagick",
+    "category": "Multimédia",
+    "description": "Suite logicielle pour créer, éditer, composer ou convertir des images bitmaps.",
+    "license": "ImageMagick",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "imagemagick",
+      "apt": "imagemagick",
+      "dnf": "imagemagick",
+      "winget": "ImageMagick.ImageMagick",
+      "scoop": "imagemagick"
+    },
+    "url": "https://imagemagick.org",
+    "logo": "https://icon.horse/icon/imagemagick.org",
+    "tags": [
+      "Image",
+      "CLI",
+      "Conversion"
+    ]
+  },
+  {
+    "name": "SubtitleEdit",
+    "category": "Multimédia",
+    "description": "Éditeur de sous-titres performant.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "packages": {
+      "aur": "subtitleedit",
+      "flatpak": "org.nikse.SubtitleEdit",
+      "winget": "Nikse.SubtitleEdit"
+    },
+    "url": "https://github.com/SubtitleEdit/subtitleedit",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Vidéo",
+      "Sous-titres"
+    ]
+  },
+  {
+    "name": "Trilium Notes",
+    "category": "Productivité",
+    "description": "Base de connaissances hiérarchique.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "docker": "triliumnext/trilium:stable",
+      "aur": "triliumnext-bin",
+      "flatpak": "com.github.zadam.trilium",
+      "winget": "Trilium.Trilium"
+    },
+    "url": "https://github.com/TriliumNext/Trilium",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Notes",
+      "PKM",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "name": "Xournal++",
+    "category": "Productivité",
+    "description": "Logiciel de prise de notes manuscrites et d'annotation de PDF.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "xournalpp",
+      "apt": "xournalpp",
+      "flatpak": "com.github.xournalpp.xournalpp",
+      "winget": "Xournal++.Xournal++"
+    },
+    "url": "https://github.com/xournalpp/xournalpp",
+    "logo": "https://icon.horse/icon/xournalpp.com",
+    "tags": [
+      "Notes",
+      "PDF",
+      "Desktop"
+    ]
+  },
+  {
+    "name": "Bento",
+    "category": "Productivité",
+    "description": "La suite bureautique qui tient dans un fichier.",
+    "license": "MIT",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {},
+    "url": "https://github.com/nyblnet/bento",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Bureautique",
+      "Minimaliste",
+      "Web"
+    ]
+  },
+  {
+    "name": "OpenNutriTracker",
+    "category": "Productivité",
+    "description": "Suivi des calories gratuit et open source (focus sur la vie privée).",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Web"
+    ],
+    "packages": {},
+    "url": "https://github.com/simonoppowa/OpenNutriTracker",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Santé",
+      "Mobile",
+      "Vie Privée"
+    ]
+  },
+  {
+    "name": "ScholarLog",
+    "category": "Productivité",
+    "description": "Logiciel GUI d'inscription de notes et de journal de travail.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "packages": {},
+    "url": "https://github.com/Hoferlukaslh/ScholarLog",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Éducation",
+      "Productivité"
+    ]
+  },
+  {
+    "name": "LocalSend",
+    "category": "Utilitaires",
+    "description": "Partage de fichiers sur le réseau local (AirDrop multiplateforme).",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "aur": "localsend-bin",
+      "flatpak": "org.localsend.localsend_app",
+      "winget": "LocalSend.LocalSend",
+      "chocolatey": "localsend",
+      "scoop": "localsend"
+    },
+    "url": "https://localsend.org",
+    "logo": "https://icon.horse/icon/localsend.org",
+    "tags": [
+      "Réseau",
+      "Partage",
+      "Desktop"
+    ]
+  },
+  {
+    "name": "Whatsie",
+    "category": "Utilitaires",
+    "description": "Client WhatsApp riche en fonctionnalités pour Desktop Linux.",
+    "license": "MIT",
+    "platforms": [
+      "Linux"
+    ],
+    "packages": {
+      "flatpak": "com.ktechpit.whatsie",
+      "aur": "whatsie",
+      "snap": "whatsie"
+    },
+    "url": "https://github.com/keshavbhatt/whatsie",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Messagerie",
+      "Desktop"
+    ]
+  },
+  {
+    "name": "ClamUI",
+    "category": "Utilitaires",
+    "description": "Interface graphique pour ClamAV (Antivirus).",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux"
+    ],
+    "packages": {
+      "flatpak": "io.github.linx_systems.ClamUI",
+      "aur": "clamui"
+    },
+    "url": "https://github.com/linx-systems/clamui",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Sécurité",
+      "Antivirus",
+      "Desktop"
+    ]
+  },
+  {
+    "name": "FreeFileSync",
+    "category": "Utilitaires",
+    "description": "Logiciel de comparaison et de synchronisation de dossiers.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "flatpak": "org.freefilesync.FreeFileSync",
+      "aur": "freefilesync",
+      "winget": "FreeFileSync.FreeFileSync"
+    },
+    "url": "https://freefilesync.org",
+    "logo": "https://icon.horse/icon/freefilesync.org",
+    "tags": [
+      "Synchronisation",
+      "Sauvegarde"
+    ]
+  },
+  {
+    "name": "GalaxyBudsClient",
+    "category": "Utilitaires",
+    "description": "Gestionnaire non-officiel pour les écouteurs Galaxy Buds.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "flatpak": "me.timschneeberger.GalaxyBudsClient",
+      "aur": "galaxybudsclient-bin"
+    },
+    "url": "https://github.com/timschneeb/GalaxyBudsClient",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Audio",
+      "Hardware"
+    ]
+  },
+  {
+    "name": "Color Picker (Gcolor3)",
+    "category": "Utilitaires",
+    "description": "Un sélecteur de couleurs simple pour Linux.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux"
+    ],
+    "packages": {
+      "flatpak": "nl.hjdskes.gcolor3",
+      "pacman": "gcolor3",
+      "apt": "gcolor3"
+    },
+    "url": "https://github.com/Hjdskes/gcolor3",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Design",
+      "Utilitaires"
+    ]
+  },
+  {
+    "name": "ripgrep",
+    "category": "Utilitaires",
+    "description": "Outil de recherche (grep) extrêmement rapide écrit en Rust.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "ripgrep",
+      "apt": "ripgrep",
+      "dnf": "ripgrep",
+      "winget": "BurntSushi.ripgrep.MSVC",
+      "scoop": "ripgrep"
+    },
+    "url": "https://github.com/BurntSushi/ripgrep",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "CLI",
+      "Recherche",
+      "Dev"
+    ]
+  },
+  {
+    "name": "Universal Android Debloater",
+    "category": "Utilitaires",
+    "description": "Nettoyer les applications préinstallées (bloatware) sur Android via ADB.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "aur": "universal-android-debloater-bin",
+      "winget": "UniversalDebloaterAlliance.UniversalAndroidDebloaterNextGeneration"
+    },
+    "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Android",
+      "Système"
+    ]
+  },
+  {
+    "name": "Scrib",
+    "category": "Utilitaires",
+    "description": "Transcription vocale (Speech-to-Text) on-device (sur l'appareil).",
+    "license": "MIT",
+    "platforms": [
+      "Android"
+    ],
+    "packages": {},
+    "url": "https://github.com/23rd/Scrib",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Audio",
+      "IA",
+      "Mobile"
+    ]
+  },
+  {
+    "name": "Winboat",
+    "category": "Système",
+    "description": "Exécuter des applications Windows sous Linux de manière transparente.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux"
+    ],
+    "packages": {
+      "aur": "winboat-bin"
+    },
+    "url": "https://github.com/winboat-org/winboat",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Système",
+      "Compatibilité"
+    ]
+  },
+
+  {
+    "name": "OpenUpTimeLab",
+    "category": "Système",
+    "description": "Application autonome pour surveiller vos serveurs, sites web et Homelab.",
+    "license": "MIT",
+    "platforms": [
+      "Android",
+      "iOS"
+    ],
+    "packages": {},
+    "url": "https://github.com/Hoferlukaslh/OpenUpTimeLab",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Monitoring",
+      "Homelab",
+      "Réseau"
+    ]
+  },
+  {
+    "name": "Mission Center",
+    "category": "Système",
+    "description": "Gestionnaire des tâches moderne pour surveiller CPU, Mémoire, Disque et Réseau.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux"
+    ],
+    "packages": {
+      "flatpak": "io.missioncenter.MissionCenter",
+      "aur": "mission-center"
+    },
+    "url": "https://missioncenter.io",
+    "logo": "https://icon.horse/icon/missioncenter.io",
+    "tags": [
+      "Monitoring",
+      "Desktop",
+      "Système"
+    ]
+  },
+  {
+    "name": "Btop",
+    "category": "Système",
+    "description": "Moniteur de ressources système esthétique pour le terminal.",
+    "license": "Apache-2.0",
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "btop",
+      "apt": "btop",
+      "dnf": "btop",
+      "snap": "btop"
+    },
+    "url": "https://github.com/aristocratos/btop",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Monitoring",
+      "CLI",
+      "Système"
+    ]
+  },
+  {
+    "name": "OpenRGB",
+    "category": "Système",
+    "description": "Contrôle de l'éclairage RGB open source, indépendant des logiciels propriétaires.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "openrgb",
+      "apt": "openrgb",
+      "flatpak": "org.openrgb.OpenRGB",
+      "winget": "CalcProgrammer1.OpenRGB"
+    },
+    "url": "https://openrgb.org",
+    "logo": "https://icon.horse/icon/openrgb.org",
+    "tags": [
+      "Hardware",
+      "Système",
+      "RGB"
+    ]
+  },
+  {
+    "name": "Wails",
+    "category": "Développement",
+    "description": "Créer de belles applications Desktop en utilisant Go et des technos Web.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "aur": "wails-bin",
+      "winget": "Wails.Wails"
+    },
+    "url": "https://wails.io",
+    "logo": "https://icon.horse/icon/wails.io",
+    "tags": [
+      "Go",
+      "Framework",
+      "Dev"
+    ]
+  },
+  {
+    "name": "Fyne",
+    "category": "Développement",
+    "description": "Boîte à outils GUI multiplateforme en Go inspirée du Material Design.",
+    "license": "BSD-3-Clause",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {},
+    "url": "https://fyne.io",
+    "logo": "https://icon.horse/icon/fyne.io",
+    "tags": [
+      "Go",
+      "Framework",
+      "UI"
+    ]
+  },
+  {
+    "name": "Avalonia",
+    "category": "Développement",
+    "description": "Framework UI .NET pour développer des applications multiplateformes.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Web",
+      "Android",
+      "iOS"
+    ],
+    "packages": {},
+    "url": "https://avaloniaui.net",
+    "logo": "https://icon.horse/icon/avaloniaui.net",
+    "tags": [
+      "C#",
+      ".NET",
+      "Framework"
+    ]
+  },
+  {
+    "name": "SharpIDE",
+    "category": "Développement",
+    "description": "IDE moderne et multiplateforme pour .NET, construit avec .NET & Godot.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {},
+    "url": "https://github.com/MattParkerDev/SharpIDE",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "IDE",
+      "C#",
+      ".NET"
+    ]
+  },
+  {
+    "name": "Node-RED",
+    "category": "Développement",
+    "description": "Outil de programmation visuelle pour l'IoT et l'automatisation.",
+    "license": "Apache-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Web"
+    ],
+    "packages": {
+      "docker": "nodered/node-red"
+    },
+    "url": "https://nodered.org",
+    "logo": "https://icon.horse/icon/nodered.org",
+    "tags": [
+      "IoT",
+      "Automatisation",
+      "Visuel"
+    ]
+  },
+  {
+    "name": "Millennium",
+    "category": "Développement",
+    "description": "Framework de modding open source pour créer des thèmes Steam.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "packages": {},
+    "url": "https://github.com/SteamClientHomebrew/Millennium",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Gaming",
+      "Steam",
+      "Modding"
+    ]
+  },
+  {
+    "name": "Moonlight",
+    "category": "Gaming",
+    "description": "Client de streaming de jeux open source (compatible NVIDIA GameStream).",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "flatpak": "com.moonlight_stream.Moonlight",
+      "aur": "moonlight-qt",
+      "apt": "moonlight-qt",
+      "winget": "MoonlightGameStreamingProject.Moonlight"
+    },
+    "url": "https://moonlight-stream.org",
+    "logo": "https://icon.horse/icon/moonlight-stream.org",
+    "tags": [
+      "Gaming",
+      "Streaming"
+    ]
+  }
+]
