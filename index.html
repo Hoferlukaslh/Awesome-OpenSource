@@ -63,18 +63,80 @@
         .quick-action-item:hover { transform: translateY(-2px); }
         .quick-action-icon { font-size: 1.8rem; }
         .quick-action-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s; }
-        
         @media (max-width: 1400px) {
             .user-quick-actions {
-            position: fixed;
-            top: 2rem;
-            left: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            z-index: 100;
+                top: 1rem;
+                left: 1rem;
+            }
         }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+                padding-bottom: 6rem; /* Espace pour les filtres fixes en bas */
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            header {
+                margin-bottom: 1.5rem;
+            }
+            /* Sur mobile, les filtres deviennent une barre flottante en bas (façon Dock) */
+            .user-quick-actions {
+                top: auto;
+                bottom: 1.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                flex-direction: row;
+                background: var(--bg-card);
+                padding: 0.6rem 2.5rem;
+                border-radius: 9999px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+                border: 1px solid var(--border);
+                gap: 2.5rem;
+            }
+            .quick-action-icon {
+                font-size: 1.5rem;
+            }
+            .grid {
+                grid-template-columns: 1fr; /* Une seule colonne */
+                gap: 1rem;
+            }
+            .card {
+                padding: 1.2rem;
+            }
+            .card-title-group {
+                padding-right: 3rem; /* Place pour les boutons favoris */
+            }
+            .user-actions {
+                top: 1rem;
+                right: 1rem;
+            }
+            .action-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+            /* Empiler proprement les tags et paquets sur petit écran */
+            .meta-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+                margin-bottom: 0.8rem;
+            }
+            .meta-label {
+                width: 100%;
+                padding-top: 0;
+                margin-bottom: -0.2rem;
+            }
+            .filter-header {
+                padding: 1rem;
+            }
+            .filter-body {
+                padding: 0 1rem 1rem 1rem;
+            }
         }
+
 
         .search-container { max-width: 600px; margin: 0 auto 2rem auto; position: relative; }
         .search-container i { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.2rem; }
@@ -327,6 +389,9 @@
                 const response = await fetch('./awesome_opensource.json');
                 if (!response.ok) throw new Error('JSON introuvable');
                 allData = await response.json();
+                
+                // Tri alphabétique de toutes les applications par nom
+                allData.sort((a, b) => a.name.localeCompare(b.name));
                 
                 let uniquePlatforms = new Set(), uniquePackages = new Set(), uniqueLicenses = new Set(), uniqueTags = new Set();
                 allData.forEach(item => {

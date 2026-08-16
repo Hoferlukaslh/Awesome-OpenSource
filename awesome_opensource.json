@@ -1070,5 +1070,277 @@
       "Gaming",
       "Streaming"
     ]
+  },
+  {
+    "name": "GIMP",
+    "category": "Multimédia",
+    "description": "Éditeur d'images matricielles puissant et extensible.",
+    "license": "GPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "gimp", "pacman": "gimp", "flatpak": "org.gimp.GIMP", "snap": "gimp" },
+    "url": "https://gimp.org",
+    "logo": "https://icon.horse/icon/gimp.org",
+    "tags": ["Image", "Design", "Desktop"]
+  },
+  {
+    "name": "Audacity",
+    "category": "Multimédia",
+    "description": "Éditeur et enregistreur audio multi-pistes.",
+    "license": "GPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "audacity", "pacman": "audacity", "flatpak": "org.audacityteam.Audacity", "snap": "audacity" },
+    "url": "https://audacityteam.org",
+    "logo": "https://icon.horse/icon/audacityteam.org",
+    "tags": ["Audio", "Desktop"]
+  },
+  {
+    "name": "Darktable",
+    "category": "Multimédia",
+    "description": "Application de flux de travail photographique open source et développeur RAW.",
+    "license": "GPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "darktable", "pacman": "darktable", "flatpak": "org.darktable.Darktable" },
+    "url": "https://www.darktable.org",
+    "logo": "https://icon.horse/icon/www.darktable.org",
+    "tags": ["Photographie", "Image", "RAW"]
+  },
+  {
+    "name": "Inkscape",
+    "category": "Multimédia",
+    "description": "Éditeur de graphiques vectoriels professionnel.",
+    "license": "GPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "inkscape", "pacman": "inkscape", "flatpak": "org.inkscape.Inkscape", "snap": "inkscape" },
+    "url": "https://inkscape.org",
+    "logo": "https://icon.horse/icon/inkscape.org",
+    "tags": ["Design", "Vectoriel", "Desktop"]
+  },
+  {
+    "name": "Blender",
+    "category": "Multimédia",
+    "description": "Suite de création 3D gratuite et open source.",
+    "license": "GPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "blender", "pacman": "blender", "flatpak": "org.blender.Blender", "snap": "blender" },
+    "url": "https://www.blender.org",
+    "logo": "https://icon.horse/icon/www.blender.org",
+    "tags": ["3D", "Animation", "Vidéo"]
+  },
+  {
+    "name": "KiCad",
+    "category": "Développement",
+    "description": "Suite logicielle de conception électronique (EDA) pour la création de schémas et de circuits imprimés.",
+    "license": "GPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "kicad", "pacman": "kicad", "flatpak": "org.kicad.KiCad" },
+    "url": "https://www.kicad.org",
+    "logo": "https://icon.horse/icon/www.kicad.org",
+    "tags": ["Électronique", "PCB", "Hardware"]
+  },
+  {
+    "name": "Wireshark",
+    "category": "Utilitaires",
+    "description": "Analyseur de protocole réseau (sniffer) le plus utilisé au monde.",
+    "license": "GPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "wireshark", "pacman": "wireshark-qt", "flatpak": "org.wireshark.Wireshark" },
+    "url": "https://www.wireshark.org",
+    "logo": "https://icon.horse/icon/www.wireshark.org",
+    "tags": ["Réseau", "Sécurité", "Analyse"]
+  },
+  {
+    "name": "Nmap",
+    "category": "Utilitaires",
+    "description": "Utilitaire gratuit et open source pour la découverte du réseau et l'audit de sécurité.",
+    "license": "Nmap License",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "nmap", "pacman": "nmap" },
+    "url": "https://nmap.org",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/73/Logo_nmap.png",
+    "tags": ["Réseau", "Sécurité", "CLI"]
+  },
+  {
+    "name": "EasyTAG",
+    "category": "Utilitaires",
+    "description": "Utilitaire simple pour afficher et modifier les tags des fichiers audio.",
+    "license": "GPL-2.0",
+    "platforms": ["Linux", "Windows"],
+    "packages": { "apt": "easytag", "pacman": "easytag", "flatpak": "org.gnome.EasyTAG" },
+    "url": "https://wiki.gnome.org/Apps/EasyTAG",
+    "logo": "https://gitlab.gnome.org/GNOME/easytag/raw/master/data/icons/128x128/org.gnome.EasyTAG.png",
+    "tags": ["Audio", "Tags"]
+  },
+  {
+    "name": "Tealdeer",
+    "category": "Utilitaires",
+    "description": "Une implémentation très rapide de 'tldr' (pages man simplifiées) en Rust.",
+    "license": "MIT",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "tealdeer", "pacman": "tealdeer" },
+    "url": "https://github.com/dbrgn/tealdeer",
+    "logo": "https://raw.githubusercontent.com/tealdeer-rs/tealdeer/main/docs/src/deer.png",
+    "tags": ["CLI", "Terminal", "Documentation"]
+  },
+  {
+    "name": "Fastfetch",
+    "category": "Système",
+    "description": "Outil d'information système pour le terminal, ultra rapide et écrit en C.",
+    "license": "MIT",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "fastfetch", "pacman": "fastfetch" },
+    "url": "https://github.com/fastfetch-cli/fastfetch",
+    "logo": "https://avatars.githubusercontent.com/u/136235211?v=4",
+    "tags": ["CLI", "Monitoring", "Système"]
+  },
+  {
+    "name": "Tmux",
+    "category": "Utilitaires",
+    "description": "Multiplexeur de terminal, permet d'exécuter plusieurs sessions dans un seul terminal.",
+    "license": "ISC",
+    "platforms": ["Linux", "macOS"],
+    "packages": { "apt": "tmux", "pacman": "tmux" },
+    "url": "https://github.com/tmux/tmux",
+    "logo": "https://cdn.simpleicons.org/tmux/1BB91F",
+    "tags": ["CLI", "Terminal", "Productivité"]
+  },
+  {
+    "name": "Lazygit",
+    "category": "Développement",
+    "description": "Interface utilisateur simple dans le terminal pour les commandes git.",
+    "license": "MIT",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "lazygit", "pacman": "lazygit" },
+    "url": "https://github.com/jesseduffield/lazygit",
+    "logo": "https://user-images.githubusercontent.com/8456633/174470852-339b5011-5800-4bb9-a628-ff230aa8cd4e.png",
+    "tags": ["Git", "CLI", "Terminal"]
+  },
+  {
+    "name": "Lazydocker",
+    "category": "Développement",
+    "description": "Une interface terminal (TUI) simple et intuitive pour gérer Docker et Docker Compose.",
+    "license": "MIT",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "pacman": "lazydocker" },
+    "url": "https://github.com/jesseduffield/lazydocker",
+    "logo": "https://user-images.githubusercontent.com/8456633/59972109-8e9c8480-95cc-11e9-8350-38f7f86ba76d.png",
+    "tags": ["Docker", "CLI", "Terminal"]
+  },
+  {
+    "name": "HandBrake",
+    "category": "Multimédia",
+    "description": "Transcodeur vidéo open source pour convertir des vidéos dans presque tous les formats modernes.",
+    "license": "GPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "handbrake", "pacman": "handbrake", "flatpak": "fr.handbrake.ghb" },
+    "url": "https://handbrake.fr",
+    "logo": "https://icon.horse/icon/handbrake.fr",
+    "tags": ["Vidéo", "Conversion"]
+  },
+  {
+    "name": "VLC media player",
+    "category": "Multimédia",
+    "description": "Lecteur multimédia gratuit et libre qui lit la plupart des fichiers multimédias.",
+    "license": "GPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
+    "packages": { "apt": "vlc", "pacman": "vlc", "flatpak": "org.videolan.VLC", "snap": "vlc" },
+    "url": "https://www.videolan.org",
+    "logo": "https://icon.horse/icon/www.videolan.org",
+    "tags": ["Vidéo", "Audio", "Lecteur"]
+  },
+  {
+    "name": "Draw.io",
+    "category": "Productivité",
+    "description": "Outil de création de diagrammes performant et sécurisé (Architecture, UML, etc.).",
+    "license": "Apache-2.0",
+    "platforms": ["Web", "Linux", "Windows", "macOS"],
+    "packages": { "snap": "drawio", "flatpak": "com.jgraph.drawio.desktop", "aur": "drawio-desktop-bin" },
+    "url": "https://www.drawio.com",
+    "logo": "https://icon.horse/icon/www.drawio.com",
+    "tags": ["Diagrammes", "Design"]
+  },
+  {
+    "name": "Teams for Linux",
+    "category": "Utilitaires",
+    "description": "Client non officiel Microsoft Teams pour Linux.",
+    "license": "GPL-3.0",
+    "platforms": ["Linux"],
+    "packages": { "snap": "teams-for-linux", "flatpak": "com.github.IsmaelMartinez.teams_for_linux" },
+    "url": "https://github.com/IsmaelMartinez/teams-for-linux",
+    "logo": "https://imgproxy.flathub.org/insecure/dpr:1/f:avif/q:100/rs:fit:128:128/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9jb20vZ2l0aHViL0lzbWFlbE1hcnRpbmV6LnRlYW1zX2Zvcl9saW51eC8yZDI3YzQ1YTNhMDYzOTRiM2Q1MTUwNTM5Y2RlNjg0NS9pY29ucy8xMjh4MTI4L2NvbS5naXRodWIuSXNtYWVsTWFydGluZXoudGVhbXNfZm9yX2xpbnV4LnBuZw",
+    "tags": ["Messagerie", "Desktop"]
+  },
+  {
+    "name": "MQTT Explorer",
+    "category": "Développement",
+    "description": "Client MQTT complet qui fournit un aperçu structuré de vos topics.",
+    "license": "MIT",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "snap": "mqtt-explorer", "aur": "mqtt-explorer" },
+    "url": "https://mqtt-explorer.com",
+    "logo": "https://mqtt-explorer.com/icon.png",
+    "tags": ["IoT", "Réseau", "Dev"]
+  },
+  {
+    "name": "JetBrains Rider",
+    "category": "Développement",
+    "description": "Environnement de développement (IDE) C# et .NET rapide et puissant. (Propriétaire).",
+    "license": "Proprietary",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "snap": "rider", "aur": "rider" },
+    "url": "https://www.jetbrains.com/rider/",
+    "logo": "https://icon.horse/icon/www.jetbrains.com",
+    "tags": ["IDE", ".NET", "C#"]
+  },
+  {
+    "name": "XnConvert",
+    "category": "Multimédia",
+    "description": "Convertisseur d'images par lots (batch) puissant et gratuit (Freeware).",
+    "license": "Freeware",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "flatpak": "com.xnview.XnConvert", "aur": "xnconvert" },
+    "url": "https://www.xnview.com/fr/xnconvert/",
+    "logo": "https://icon.horse/icon/www.xnview.com",
+    "tags": ["Image", "Conversion"]
+  },
+  {
+    "name": "Brave Browser",
+    "category": "Utilitaires",
+    "description": "Navigateur web open source axé sur la confidentialité et le blocage des publicités.",
+    "license": "MPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
+    "packages": { "snap": "brave", "flatpak": "com.brave.Browser", "aur": "brave-bin" },
+    "url": "https://brave.com",
+    "logo": "https://icon.horse/icon/brave.com",
+    "tags": ["Web", "Navigateur", "Vie Privée"]
+  },
+  {
+    "name": "Seafile",
+    "category": "Cloud & Serveur",
+    "description": "Solution de synchronisation et de partage de fichiers hautes performances et très fiable.",
+    "license": "GPL-2.0",
+    "platforms": ["Web", "Linux", "Windows", "macOS", "Android", "iOS"],
+    "packages": {
+      "docker": "seafileltd/seafile-mc",
+      "pacman": "seafile-client",
+      "apt": "seafile-gui",
+      "winget": "Seafile.Seafile",
+      "flatpak": "com.seafile.Client"
+    },
+    "url": "https://www.seafile.com/en/home/",
+    "logo": "https://icon.horse/icon/www.seafile.com",
+    "tags": ["Cloud", "Self-Hosted", "Synchronisation"]
+  },
+  {
+    "name": "OxiCloud",
+    "category": "Cloud & Serveur",
+    "description": "Stockage cloud auto-hébergé ultra-rapide, sécurisé et léger écrit en Rust.",
+    "license": "AGPL-3.0",
+    "platforms": ["Web", "Linux"],
+    "packages": {
+      "docker": "ghcr.io/atalayalabs/oxicloud:latest"
+    },
+    "url": "https://github.com/AtalayaLabs/OxiCloud",
+    "logo": "https://raw.githubusercontent.com/AtalayaLabs/OxiCloud/main/images/oxicloud-logo.png",
+    "tags": ["Cloud", "Self-Hosted", "Rust"]
   }
 ]
