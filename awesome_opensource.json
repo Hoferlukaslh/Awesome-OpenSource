@@ -1004,6 +1004,29 @@
     ]
   },
   {
+    "name": "Comaps",
+    "category": "Productivité",
+    "description": "Application de cartographie collaborative open source.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Web",
+      "Android",
+      "macOS",
+      "iOS"
+    ],
+    "packages": {
+      "flatpak": "app.comaps.comaps"
+    },
+    "url": "https://www.comaps.app/fr/",
+    "logo": "https://icon.horse/icon/www.comaps.app",
+    "tags": [
+      "Cartographie",
+      "Collaboration",
+      "Web"
+    ]
+  },
+  {
     "name": "Millennium",
     "category": "Développement",
     "description": "Framework de modding open source pour créer des thèmes Steam.",
@@ -1013,7 +1036,7 @@
       "Windows"
     ],
     "packages": {
-      "aur": "millennium",
+      "aur": "millennium"
     },
     "url": "https://github.com/SteamClientHomebrew/Millennium",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1280px-Steam_icon_logo.svg.png",
