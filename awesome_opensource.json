@@ -1012,7 +1012,9 @@
       "Linux",
       "Windows"
     ],
-    "packages": {},
+    "packages": {
+      "aur": "millennium",
+    },
     "url": "https://github.com/SteamClientHomebrew/Millennium",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1280px-Steam_icon_logo.svg.png",
     "tags": [
