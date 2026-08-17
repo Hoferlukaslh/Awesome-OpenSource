@@ -28,83 +28,207 @@
       "Cloud",
       "Self-Hosted",
       "Collaboration"
+    ],
+    "alternatives": [
+      "Google Drive",
+      "Dropbox",
+      "Microsoft 365"
     ]
-  },{
+  },
+  {
     "name": "LibreWolf",
     "category": "Utilitaires",
     "description": "Navigateur web open source axé sur la vie privée, la sécurité et la liberté, basé sur Firefox.",
     "license": "MPL-2.0",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "aur": "librewolf-bin", "flatpak": "io.gitlab.librewolf-community", "winget": "LibreWolf.LibreWolf" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "aur": "librewolf-bin",
+      "flatpak": "io.gitlab.librewolf-community",
+      "winget": "LibreWolf.LibreWolf"
+    },
     "url": "https://librewolf.net/",
     "logo": "https://icon.horse/icon/librewolf.net",
-    "tags": ["Web", "Navigateur", "Vie Privée"]
+    "tags": [
+      "Web",
+      "Navigateur",
+      "Vie Privée"
+    ],
+    "alternatives": [
+      "Google Chrome",
+      "Microsoft Edge"
+    ]
   },
   {
     "name": "Firefox",
     "category": "Utilitaires",
     "description": "Navigateur web libre et respectueux de la vie privée développé par Mozilla.",
     "license": "MPL-2.0",
-    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
-    "packages": { "apt": "firefox", "pacman": "firefox", "flatpak": "org.mozilla.firefox", "snap": "firefox", "winget": "Mozilla.Firefox" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "apt": "firefox",
+      "pacman": "firefox",
+      "flatpak": "org.mozilla.firefox",
+      "snap": "firefox",
+      "winget": "Mozilla.Firefox"
+    },
     "url": "https://www.mozilla.org/firefox/",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1280px-Firefox_logo%2C_2019.svg.png",
-    "tags": ["Web", "Navigateur"]
+    "tags": [
+      "Web",
+      "Navigateur"
+    ],
+    "alternatives": [
+      "Google Chrome",
+      "Safari"
+    ]
   },
   {
     "name": "Sumatra PDF",
     "category": "Productivité",
     "description": "Lecteur de PDF, eBook (ePub, Mobi), XPS, DjVu, CHM et bandes dessinées ultra-léger et rapide.",
     "license": "AGPL-3.0",
-    "platforms": ["Windows"],
-    "packages": { "winget": "SumatraPDF.SumatraPDF", "chocolatey": "sumatrapdf", "scoop": "sumatrapdf" },
+    "platforms": [
+      "Windows"
+    ],
+    "packages": {
+      "winget": "SumatraPDF.SumatraPDF",
+      "chocolatey": "sumatrapdf",
+      "scoop": "sumatrapdf"
+    },
     "url": "https://www.sumatrapdfreader.org/",
     "logo": "https://icon.horse/icon/www.sumatrapdfreader.org",
-    "tags": ["PDF", "Lecteur", "Minimaliste", "Windows"]
+    "tags": [
+      "PDF",
+      "Lecteur",
+      "Minimaliste",
+      "Windows"
+    ],
+    "alternatives": [
+      "Adobe Acrobat Reader"
+    ]
   },
   {
     "name": "Okular",
     "category": "Productivité",
     "description": "Visionneuse de documents universelle multiplateforme développée par KDE.",
     "license": "GPL-2.0",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "apt": "okular", "pacman": "okular", "flatpak": "org.kde.okular", "winget": "KDE.Okular" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "okular",
+      "pacman": "okular",
+      "flatpak": "org.kde.okular",
+      "winget": "KDE.Okular"
+    },
     "url": "https://okular.kde.org/",
     "logo": "https://icon.horse/icon/okular.kde.org",
-    "tags": ["PDF", "Lecteur", "Document"]
+    "tags": [
+      "PDF",
+      "Lecteur",
+      "Document"
+    ],
+    "alternatives": [
+      "Adobe Acrobat Reader"
+    ]
   },
   {
     "name": "Thunderbird",
     "category": "Productivité",
     "description": "Application de messagerie libre, open source et multiplateforme pour gérer vos e-mails et agendas.",
     "license": "MPL-2.0",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "apt": "thunderbird", "pacman": "thunderbird", "flatpak": "org.mozilla.Thunderbird", "snap": "thunderbird", "winget": "Mozilla.Thunderbird" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "thunderbird",
+      "pacman": "thunderbird",
+      "flatpak": "org.mozilla.Thunderbird",
+      "snap": "thunderbird",
+      "winget": "Mozilla.Thunderbird"
+    },
     "url": "https://www.thunderbird.net/",
     "logo": "https://icon.horse/icon/www.thunderbird.net",
-    "tags": ["Messagerie", "Email", "RSS"]
+    "tags": [
+      "Messagerie",
+      "Email",
+      "RSS"
+    ],
+    "alternatives": [
+      "Microsoft Outlook",
+      "Apple Mail"
+    ]
   },
   {
     "name": "7-Zip",
     "category": "Utilitaires",
     "description": "Utilitaire d'archivage de fichiers avec un taux de compression très élevé.",
     "license": "LGPL-2.1",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "apt": "p7zip-full", "pacman": "7-zip", "winget": "7zip.7zip", "chocolatey": "7zip", "scoop": "7zip" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "p7zip-full",
+      "pacman": "7-zip",
+      "winget": "7zip.7zip",
+      "chocolatey": "7zip",
+      "scoop": "7zip"
+    },
     "url": "https://www.7-zip.org/",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/3/37/7-Zip_Logo.png",
-    "tags": ["Archive", "Compression", "Système"]
+    "tags": [
+      "Archive",
+      "Compression",
+      "Système"
+    ],
+    "alternatives": [
+      "WinRAR",
+      "WinZip"
+    ]
   },
   {
     "name": "Zen Browser",
     "category": "Utilitaires",
     "description": "Navigateur web minimaliste, axé sur la vie privée et la productivité (basé sur Firefox).",
     "license": "MPL-2.0",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "aur": "zen-browser-bin", "flatpak": "io.github.zen_browser.zen", "winget": "ZenBrowser.ZenBrowser" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "aur": "zen-browser-bin",
+      "flatpak": "io.github.zen_browser.zen",
+      "winget": "ZenBrowser.ZenBrowser"
+    },
     "url": "https://zen-browser.app/",
     "logo": "https://icon.horse/icon/zen-browser.app",
-    "tags": ["Web", "Navigateur", "Minimaliste", "Vie Privée"]
+    "tags": [
+      "Web",
+      "Navigateur",
+      "Minimaliste",
+      "Vie Privée"
+    ],
+    "alternatives": [
+      "Arc Browser",
+      "Google Chrome"
+    ]
   },
   {
     "name": "Immich",
@@ -125,6 +249,11 @@
       "Photos",
       "Self-Hosted",
       "Sauvegarde"
+    ],
+    "alternatives": [
+      "Google Photos",
+      "Apple Photos",
+      "Amazon Photos"
     ]
   },
   {
@@ -163,6 +292,11 @@
       "Design",
       "UI/UX",
       "Self-Hosted"
+    ],
+    "alternatives": [
+      "Figma",
+      "Adobe XD",
+      "Sketch"
     ]
   },
   {
@@ -181,6 +315,10 @@
     "tags": [
       "Voyage",
       "Self-Hosted"
+    ],
+    "alternatives": [
+      "Polarsteps",
+      "Wanderlog"
     ]
   },
   {
@@ -200,6 +338,9 @@
       "Réseau",
       "Sécurité",
       "Self-Hosted"
+    ],
+    "alternatives": [
+      "Fing"
     ]
   },
   {
@@ -225,6 +366,10 @@
     "tags": [
       "Base de données",
       "Serveur"
+    ],
+    "alternatives": [
+      "MySQL",
+      "Microsoft SQL Server"
     ]
   },
   {
@@ -292,6 +437,9 @@
       "Serveur",
       "Self-Hosted",
       "Proxy"
+    ],
+    "alternatives": [
+      "Nginx Proxy Manager"
     ]
   },
   {
@@ -312,6 +460,10 @@
       "Multimédia",
       "Self-Hosted",
       "Streaming"
+    ],
+    "alternatives": [
+      "Plex",
+      "Emby"
     ]
   },
   {
@@ -338,6 +490,10 @@
       "Vidéo",
       "Streaming",
       "Desktop"
+    ],
+    "alternatives": [
+      "XSplit",
+      "Streamlabs"
     ]
   },
   {
@@ -363,6 +519,9 @@
       "CLI",
       "Vidéo",
       "Utilitaires"
+    ],
+    "alternatives": [
+      "4K Video Downloader"
     ]
   },
   {
@@ -408,6 +567,10 @@
       "Multimédia",
       "Self-Hosted",
       "Streaming"
+    ],
+    "alternatives": [
+      "Plex",
+      "Emby"
     ]
   },
   {
@@ -448,6 +611,9 @@
       "Vidéo",
       "Self-Hosted",
       "Collaboration"
+    ],
+    "alternatives": [
+      "Frame.io"
     ]
   },
   {
@@ -466,6 +632,9 @@
       "Image",
       "Design",
       "Plugin"
+    ],
+    "alternatives": [
+      "Photoshop"
     ]
   },
   {
@@ -486,6 +655,9 @@
     "tags": [
       "Image",
       "Photographie"
+    ],
+    "alternatives": [
+      "Adobe Lightroom"
     ]
   },
   {
@@ -526,6 +698,11 @@
       "Audio",
       "Musique",
       "Desktop"
+    ],
+    "alternatives": [
+      "Foobar2000",
+      "Winamp",
+      "AIMP"
     ]
   },
   {
@@ -572,6 +749,9 @@
     "tags": [
       "Vidéo",
       "Sous-titres"
+    ],
+    "alternatives": [
+      "Aegisub"
     ]
   },
   {
@@ -597,6 +777,11 @@
       "Notes",
       "PKM",
       "Self-Hosted"
+    ],
+    "alternatives": [
+      "Evernote",
+      "Notion",
+      "Obsidian"
     ]
   },
   {
@@ -621,62 +806,11 @@
       "Notes",
       "PDF",
       "Desktop"
+    ],
+    "alternatives": [
+      "GoodNotes",
+      "Notability"
     ]
-  },
-  {
-    "name": "Gitea",
-    "category": "Développement",
-    "description": "Plateforme d'hébergement de code (Git) légère et auto-hébergée (fork communautaire de Gogs).",
-    "license": "MIT",
-    "platforms": ["Web", "Linux", "Windows", "macOS"],
-    "packages": { "docker": "gitea/gitea", "pacman": "gitea", "snap": "gitea", "aur": "gitea-bin" },
-    "url": "https://gitea.io/",
-    "logo": "https://icon.horse/icon/gitea.io",
-    "tags": ["Git", "Self-Hosted", "Cloud", "Code"]
-  },
-  {
-    "name": "Freeplane",
-    "category": "Productivité",
-    "description": "Logiciel de mind mapping et d'organisation des connaissances libre et très puissant (évolution de FreeMind).",
-    "license": "GPL-2.0",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "apt": "freeplane", "pacman": "freeplane", "flatpak": "org.freeplane.App", "winget": "Freeplane.Freeplane" },
-    "url": "https://www.freeplane.org/",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Freeplane-icon-2022.svg/langfr-1280px-Freeplane-icon-2022.svg.png",
-    "tags": ["Mind-Mapping", "Organisation", "Notes"]
-  },
-  {
-    "name": "Krita",
-    "category": "Multimédia",
-    "description": "Logiciel professionnel de peinture numérique et d'animation 2D, conçu pour les illustrateurs et artistes.",
-    "license": "GPL-3.0",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "apt": "krita", "pacman": "krita", "flatpak": "org.kde.krita", "snap": "krita", "winget": "KDE.Krita" },
-    "url": "https://krita.org/",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/langfr-1280px-Calligrakrita-base.svg.png",
-    "tags": ["Dessin", "Illustration", "2D", "Design"]
-  },
-  {
-    "name": "Revolt",
-    "category": "Utilitaires",
-    "description": "Alternative open source à Discord, légère et axée sur la protection de la vie privée.",
-    "license": "AGPL-3.0",
-    "platforms": ["Web", "Linux", "Windows", "macOS", "Android"],
-    "packages": { "aur": "revolt-desktop-bin", "flatpak": "chat.revolt.RevoltDesktop", "winget": "Revolt.Revolt" },
-    "url": "https://revolt.chat/",
-    "logo": "https://icon.horse/icon/revolt.chat",
-    "tags": ["Messagerie", "Chat", "Discord", "Vie Privée"]
-  },
-  {
-    "name": "Signal",
-    "category": "Utilitaires",
-    "description": "Application de messagerie instantanée sécurisée avec chiffrement de bout en bout.",
-    "license": "AGPL-3.0",
-    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
-    "packages": { "apt": "signal-desktop", "pacman": "signal-desktop", "flatpak": "org.signal.Signal", "snap": "signal-desktop", "winget": "OpenWhisperSystems.Signal" },
-    "url": "https://signal.org/",
-    "logo": "https://icon.horse/icon/signal.org",
-    "tags": ["Messagerie", "Sécurité", "Chiffrement", "Vie Privée"]
   },
   {
     "name": "Bento",
@@ -693,6 +827,10 @@
       "Bureautique",
       "Minimaliste",
       "Web"
+    ],
+    "alternatives": [
+      "Microsoft Office",
+      "Google Workspace"
     ]
   },
   {
@@ -712,6 +850,11 @@
       "Santé",
       "Mobile",
       "Vie Privée"
+    ],
+    "alternatives": [
+      "MyFitnessPal",
+      "Yuka",
+      "MacroFactor"
     ]
   },
   {
@@ -756,6 +899,10 @@
       "Réseau",
       "Partage",
       "Desktop"
+    ],
+    "alternatives": [
+      "AirDrop",
+      "Quick Share"
     ]
   },
   {
@@ -776,6 +923,9 @@
     "tags": [
       "Messagerie",
       "Desktop"
+    ],
+    "alternatives": [
+      "WhatsApp Desktop"
     ]
   },
   {
@@ -796,6 +946,10 @@
       "Sécurité",
       "Antivirus",
       "Desktop"
+    ],
+    "alternatives": [
+      "Avast",
+      "Windows Defender"
     ]
   },
   {
@@ -824,6 +978,10 @@
       "Bureautique",
       "Desktop",
       "Suite"
+    ],
+    "alternatives": [
+      "Microsoft Office",
+      "Google Workspace"
     ]
   },
   {
@@ -854,12 +1012,16 @@
       "Bureautique",
       "Collaboration",
       "Desktop"
+    ],
+    "alternatives": [
+      "Microsoft Office",
+      "Google Workspace"
     ]
   },
   {
     "name": "FreeFileSync",
     "category": "Utilitaires",
-    "description": "Logiciel de comparaison et de synchronisation de dossiers (Attention : usage commercial soumis à licence payante en violation de la GPL).",
+    "description": "Logiciel de comparaison et de synchronisation de dossiers. (Attention : usage commercial soumis à licence payante en violation de la GPL).",
     "license": "Proprietary / Custom",
     "platforms": [
       "Linux",
@@ -876,6 +1038,10 @@
     "tags": [
       "Synchronisation",
       "Sauvegarde"
+    ],
+    "alternatives": [
+      "GoodSync",
+      "SyncBack"
     ]
   },
   {
@@ -897,6 +1063,9 @@
     "tags": [
       "Audio",
       "Hardware"
+    ],
+    "alternatives": [
+      "Galaxy Wearable"
     ]
   },
   {
@@ -917,6 +1086,9 @@
     "tags": [
       "Design",
       "Utilitaires"
+    ],
+    "alternatives": [
+      "PowerToys ColorPicker"
     ]
   },
   {
@@ -942,6 +1114,9 @@
       "CLI",
       "Recherche",
       "Dev"
+    ],
+    "alternatives": [
+      "grep"
     ]
   },
   {
@@ -980,6 +1155,10 @@
       "Audio",
       "IA",
       "Mobile"
+    ],
+    "alternatives": [
+      "Google Recorder",
+      "Otter.ai"
     ]
   },
   {
@@ -999,6 +1178,11 @@
       "Système",
       "Compatibilité",
       "Windows"
+    ],
+    "alternatives": [
+      "Wine",
+      "CrossOver",
+      "Proton"
     ]
   },
   {
@@ -1017,6 +1201,10 @@
       "Monitoring",
       "Homelab",
       "Réseau"
+    ],
+    "alternatives": [
+      "UptimeRobot",
+      "Kuma"
     ]
   },
   {
@@ -1037,6 +1225,10 @@
       "Monitoring",
       "Desktop",
       "Système"
+    ],
+    "alternatives": [
+      "Gestionnaire des tâches Windows",
+      "Moniteur d'activité macOS"
     ]
   },
   {
@@ -1060,6 +1252,11 @@
       "Monitoring",
       "CLI",
       "Système"
+    ],
+    "alternatives": [
+      "htop",
+      "top",
+      "Gestionnaire des tâches Windows"
     ]
   },
   {
@@ -1084,6 +1281,11 @@
       "Hardware",
       "Système",
       "RGB"
+    ],
+    "alternatives": [
+      "Corsair iCUE",
+      "Razer Synapse",
+      "Aura Sync"
     ]
   },
   {
@@ -1106,6 +1308,10 @@
       "Go",
       "Framework",
       "Dev"
+    ],
+    "alternatives": [
+      "Electron",
+      "Tauri"
     ]
   },
   {
@@ -1127,6 +1333,10 @@
       "Go",
       "Framework",
       "UI"
+    ],
+    "alternatives": [
+      "Electron",
+      "Qt"
     ]
   },
   {
@@ -1149,6 +1359,10 @@
       "C#",
       ".NET",
       "Framework"
+    ],
+    "alternatives": [
+      "WPF",
+      "MAUI"
     ]
   },
   {
@@ -1168,6 +1382,10 @@
       "IDE",
       "C#",
       ".NET"
+    ],
+    "alternatives": [
+      "Visual Studio",
+      "JetBrains Rider"
     ]
   },
   {
@@ -1190,6 +1408,10 @@
       "IoT",
       "Automatisation",
       "Visuel"
+    ],
+    "alternatives": [
+      "Zapier",
+      "Make"
     ]
   },
   {
@@ -1213,6 +1435,10 @@
       "Cartographie",
       "Collaboration",
       "Web"
+    ],
+    "alternatives": [
+      "Google Maps",
+      "Apple Plans"
     ]
   },
   {
@@ -1258,6 +1484,10 @@
     "tags": [
       "Gaming",
       "Streaming"
+    ],
+    "alternatives": [
+      "Steam Link",
+      "Parsec"
     ]
   },
   {
@@ -1282,6 +1512,10 @@
       "Image",
       "Design",
       "Desktop"
+    ],
+    "alternatives": [
+      "Adobe Photoshop",
+      "Affinity Photo"
     ]
   },
   {
@@ -1305,6 +1539,9 @@
     "tags": [
       "Audio",
       "Desktop"
+    ],
+    "alternatives": [
+      "Adobe Audition"
     ]
   },
   {
@@ -1328,6 +1565,9 @@
       "Photographie",
       "Image",
       "RAW"
+    ],
+    "alternatives": [
+      "Adobe Lightroom"
     ]
   },
   {
@@ -1352,6 +1592,10 @@
       "Design",
       "Vectoriel",
       "Desktop"
+    ],
+    "alternatives": [
+      "Adobe Illustrator",
+      "Affinity Designer"
     ]
   },
   {
@@ -1376,6 +1620,10 @@
       "3D",
       "Animation",
       "Vidéo"
+    ],
+    "alternatives": [
+      "Autodesk Maya",
+      "Cinema 4D"
     ]
   },
   {
@@ -1399,6 +1647,10 @@
       "Électronique",
       "PCB",
       "Hardware"
+    ],
+    "alternatives": [
+      "Altium Designer",
+      "Autodesk Eagle"
     ]
   },
   {
@@ -1465,6 +1717,9 @@
     "tags": [
       "Audio",
       "Tags"
+    ],
+    "alternatives": [
+      "Mp3tag"
     ]
   },
   {
@@ -1487,6 +1742,9 @@
       "CLI",
       "Terminal",
       "Documentation"
+    ],
+    "alternatives": [
+      "man"
     ]
   },
   {
@@ -1509,6 +1767,9 @@
       "CLI",
       "Monitoring",
       "Système"
+    ],
+    "alternatives": [
+      "Neofetch"
     ]
   },
   {
@@ -1530,6 +1791,9 @@
       "CLI",
       "Terminal",
       "Productivité"
+    ],
+    "alternatives": [
+      "Screen"
     ]
   },
   {
@@ -1552,6 +1816,11 @@
       "Git",
       "CLI",
       "Terminal"
+    ],
+    "alternatives": [
+      "GitKraken",
+      "Sourcetree",
+      "GitHub Desktop"
     ]
   },
   {
@@ -1573,6 +1842,9 @@
       "Docker",
       "CLI",
       "Terminal"
+    ],
+    "alternatives": [
+      "Docker Desktop"
     ]
   },
   {
@@ -1595,6 +1867,9 @@
     "tags": [
       "Vidéo",
       "Conversion"
+    ],
+    "alternatives": [
+      "Adobe Media Encoder"
     ]
   },
   {
@@ -1621,6 +1896,10 @@
       "Vidéo",
       "Audio",
       "Lecteur"
+    ],
+    "alternatives": [
+      "Windows Media Player",
+      "QuickTime"
     ]
   },
   {
@@ -1644,6 +1923,10 @@
     "tags": [
       "Diagrammes",
       "Design"
+    ],
+    "alternatives": [
+      "Microsoft Visio",
+      "Lucidchart"
     ]
   },
   {
@@ -1651,66 +1934,177 @@
     "category": "Développement",
     "description": "Binaires open source de VS Code, sans la télémétrie et le pistage de Microsoft.",
     "license": "MIT",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "aur": "vscodium-bin", "flatpak": "com.vscodium.codium", "snap": "codium", "winget": "VSCodium.VSCodium", "scoop": "vscodium" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "aur": "vscodium-bin",
+      "flatpak": "com.vscodium.codium",
+      "snap": "codium",
+      "winget": "VSCodium.VSCodium",
+      "scoop": "vscodium"
+    },
     "url": "https://vscodium.com/",
     "logo": "https://icon.horse/icon/vscodium.com",
-    "tags": ["IDE", "Code", "Dev"]
+    "tags": [
+      "IDE",
+      "Code",
+      "Dev"
+    ],
+    "alternatives": [
+      "Visual Studio Code",
+      "Sublime Text"
+    ]
   },
   {
     "name": "Godot Engine",
     "category": "Développement",
     "description": "Moteur de jeu 2D et 3D open source puissant, complet et multiplateforme.",
     "license": "MIT",
-    "platforms": ["Linux", "Windows", "macOS", "Web", "Android"],
-    "packages": { "pacman": "godot", "flatpak": "org.godotengine.Godot", "winget": "GodotEngine.GodotEngine", "scoop": "godot" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Web",
+      "Android"
+    ],
+    "packages": {
+      "pacman": "godot",
+      "flatpak": "org.godotengine.Godot",
+      "winget": "GodotEngine.GodotEngine",
+      "scoop": "godot"
+    },
     "url": "https://godotengine.org/",
     "logo": "https://icon.horse/icon/godotengine.org",
-    "tags": ["Jeu", "3D", "2D", "Moteur"]
+    "tags": [
+      "Jeu",
+      "3D",
+      "2D",
+      "Moteur"
+    ],
+    "alternatives": [
+      "Unity",
+      "Unreal Engine"
+    ]
   },
   {
     "name": "Grafana",
     "category": "Cloud & Serveur",
     "description": "Plateforme phare d'analyse et de surveillance interactive (création de dashboards).",
     "license": "AGPL-3.0",
-    "platforms": ["Web", "Linux", "Windows", "macOS"],
-    "packages": { "apt": "grafana", "pacman": "grafana", "docker": "grafana/grafana" },
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "grafana",
+      "pacman": "grafana",
+      "docker": "grafana/grafana"
+    },
     "url": "https://grafana.com/",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/langfr-1280px-Grafana_logo.svg.png",
-    "tags": ["Dashboard", "Monitoring", "Métriques", "Self-Hosted"]
+    "tags": [
+      "Dashboard",
+      "Monitoring",
+      "Métriques",
+      "Self-Hosted"
+    ],
+    "alternatives": [
+      "Datadog",
+      "Kibana"
+    ]
   },
   {
     "name": "AppFlowy",
     "category": "Productivité",
     "description": "Alternative open source à Notion, axée sur la vie privée et le stockage de données en local.",
     "license": "AGPL-3.0",
-    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
-    "packages": { "aur": "appflowy", "flatpak": "io.appflowy.AppFlowy", "winget": "AppFlowy.AppFlowy" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "aur": "appflowy",
+      "flatpak": "io.appflowy.AppFlowy",
+      "winget": "AppFlowy.AppFlowy"
+    },
     "url": "https://www.appflowy.io/",
     "logo": "https://icon.horse/icon/www.appflowy.io",
-    "tags": ["PKM", "Notes", "Organisation", "Vie Privée"]
+    "tags": [
+      "PKM",
+      "Notes",
+      "Organisation",
+      "Vie Privée"
+    ],
+    "alternatives": [
+      "Notion",
+      "Evernote"
+    ]
   },
   {
     "name": "RustDesk",
     "category": "Utilitaires",
     "description": "Logiciel de bureau à distance open source écrit en Rust. L'alternative parfaite à TeamViewer.",
     "license": "AGPL-3.0",
-    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS", "Web"],
-    "packages": { "aur": "rustdesk", "flatpak": "com.rustdesk.RustDesk", "winget": "RustDesk.RustDesk" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS",
+      "Web"
+    ],
+    "packages": {
+      "aur": "rustdesk",
+      "flatpak": "com.rustdesk.RustDesk",
+      "winget": "RustDesk.RustDesk"
+    },
     "url": "https://rustdesk.com/",
     "logo": "https://icon.horse/icon/rustdesk.com",
-    "tags": ["Réseau", "Bureau à distance", "Rust"]
+    "tags": [
+      "Réseau",
+      "Bureau à distance",
+      "Rust"
+    ],
+    "alternatives": [
+      "TeamViewer",
+      "AnyDesk"
+    ]
   },
   {
     "name": "Podman",
     "category": "Développement",
     "description": "Moteur de conteneurs sans démon (daemonless) et rootless, alternative directe à Docker.",
     "license": "Apache-2.0",
-    "platforms": ["Linux", "Windows", "macOS"],
-    "packages": { "apt": "podman", "pacman": "podman", "dnf": "podman", "winget": "RedHat.Podman-Desktop" },
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "podman",
+      "pacman": "podman",
+      "dnf": "podman",
+      "winget": "RedHat.Podman-Desktop"
+    },
     "url": "https://podman.io/",
     "logo": "https://icon.horse/icon/podman.io",
-    "tags": ["Conteneurs", "Docker", "Système", "CLI"]
+    "tags": [
+      "Conteneurs",
+      "Docker",
+      "Système",
+      "CLI"
+    ],
+    "alternatives": [
+      "Docker Desktop"
+    ]
   },
   {
     "name": "Teams for Linux",
@@ -1729,6 +2123,9 @@
     "tags": [
       "Messagerie",
       "Desktop"
+    ],
+    "alternatives": [
+      "Microsoft Teams"
     ]
   },
   {
@@ -1751,6 +2148,9 @@
       "IoT",
       "Réseau",
       "Dev"
+    ],
+    "alternatives": [
+      "MQTT.fx"
     ]
   },
   {
@@ -1773,6 +2173,9 @@
       "IDE",
       ".NET",
       "C#"
+    ],
+    "alternatives": [
+      "Visual Studio"
     ]
   },
   {
@@ -1794,6 +2197,9 @@
     "tags": [
       "Image",
       "Conversion"
+    ],
+    "alternatives": [
+      "Adobe Lightroom (Batch)"
     ]
   },
   {
@@ -1819,6 +2225,9 @@
       "Web",
       "Navigateur",
       "Vie Privée"
+    ],
+    "alternatives": [
+      "Google Chrome"
     ]
   },
   {
@@ -1847,6 +2256,11 @@
       "Cloud",
       "Self-Hosted",
       "Synchronisation"
+    ],
+    "alternatives": [
+      "Google Drive",
+      "Dropbox",
+      "OneDrive"
     ]
   },
   {
@@ -1867,6 +2281,162 @@
       "Cloud",
       "Self-Hosted",
       "Rust"
+    ],
+    "alternatives": [
+      "Google Drive",
+      "Nextcloud"
+    ]
+  },
+  {
+    "name": "Gitea",
+    "category": "Développement",
+    "description": "Plateforme d'hébergement de code (Git) légère et auto-hébergée (fork communautaire de Gogs).",
+    "license": "MIT",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "docker": "gitea/gitea",
+      "pacman": "gitea",
+      "snap": "gitea",
+      "aur": "gitea-bin"
+    },
+    "url": "https://gitea.io/",
+    "logo": "https://icon.horse/icon/gitea.io",
+    "tags": [
+      "Git",
+      "Self-Hosted",
+      "Cloud",
+      "Code"
+    ],
+    "alternatives": [
+      "GitHub",
+      "GitLab",
+      "Bitbucket"
+    ]
+  },
+  {
+    "name": "Freeplane",
+    "category": "Productivité",
+    "description": "Logiciel de mind mapping et d'organisation des connaissances libre et très puissant (évolution de FreeMind).",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "freeplane",
+      "pacman": "freeplane",
+      "flatpak": "org.freeplane.App",
+      "winget": "Freeplane.Freeplane"
+    },
+    "url": "https://www.freeplane.org/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Freeplane-icon-2022.svg/langfr-1280px-Freeplane-icon-2022.svg.png",
+    "tags": [
+      "Mind-Mapping",
+      "Organisation",
+      "Notes"
+    ],
+    "alternatives": [
+      "XMind",
+      "MindManager"
+    ]
+  },
+  {
+    "name": "Krita",
+    "category": "Multimédia",
+    "description": "Logiciel professionnel de peinture numérique et d'animation 2D, conçu pour les illustrateurs et artistes.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "krita",
+      "pacman": "krita",
+      "flatpak": "org.kde.krita",
+      "snap": "krita",
+      "winget": "KDE.Krita"
+    },
+    "url": "https://krita.org/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/langfr-1280px-Calligrakrita-base.svg.png",
+    "tags": [
+      "Dessin",
+      "Illustration",
+      "2D",
+      "Design"
+    ],
+    "alternatives": [
+      "Adobe Photoshop",
+      "Clip Studio Paint",
+      "Procreate"
+    ]
+  },
+  {
+    "name": "Revolt",
+    "category": "Utilitaires",
+    "description": "Alternative open source à Discord, légère et axée sur la protection de la vie privée.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android"
+    ],
+    "packages": {
+      "aur": "revolt-desktop-bin",
+      "flatpak": "chat.revolt.RevoltDesktop",
+      "winget": "Revolt.Revolt"
+    },
+    "url": "https://revolt.chat/",
+    "logo": "https://icon.horse/icon/revolt.chat",
+    "tags": [
+      "Messagerie",
+      "Chat",
+      "Discord",
+      "Vie Privée"
+    ],
+    "alternatives": [
+      "Discord",
+      "Slack"
+    ]
+  },
+  {
+    "name": "Signal",
+    "category": "Utilitaires",
+    "description": "Application de messagerie instantanée sécurisée avec chiffrement de bout en bout.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "apt": "signal-desktop",
+      "pacman": "signal-desktop",
+      "flatpak": "org.signal.Signal",
+      "snap": "signal-desktop",
+      "winget": "OpenWhisperSystems.Signal"
+    },
+    "url": "https://signal.org/",
+    "logo": "https://icon.horse/icon/signal.org",
+    "tags": [
+      "Messagerie",
+      "Sécurité",
+      "Chiffrement",
+      "Vie Privée"
+    ],
+    "alternatives": [
+      "WhatsApp",
+      "Telegram"
     ]
   }
 ]

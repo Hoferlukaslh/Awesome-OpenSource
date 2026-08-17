@@ -43,8 +43,8 @@
         }
 
         /* --- COULEURS D'ACCENT --- */
-        [data-accent="blue"]   { 
-            --accent: #38bdf8; 
+        [data-accent="blue"]   {
+            --accent: #38bdf8;
             --bg-color: var(--base-bg);
             --bg-card: var(--base-card);
             --border: var(--base-border);
@@ -218,9 +218,7 @@
             .accent-colors {
                 display: flex;
             }
-
         }
-
 
         .search-container { max-width: 600px; margin: 0 auto 2rem auto; position: relative; }
         .search-container i { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.2rem; }
@@ -248,11 +246,11 @@
         .filter-btn.active { background-color: var(--accent); color: var(--base-bg); border-color: var(--accent); font-weight: 600; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; max-width: 1400px; margin: 0 auto; }
-        
+
         /* --- CARD STYLES --- */
         .card { position: relative; background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s; }
         .card:hover { transform: translateY(-4px); border-color: var(--accent); }
-        
+
         .card-header { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
         .logo-img { width: 48px; height: 48px; border-radius: 10px; background: #fff; padding: 4px; object-fit: contain; }
         .card-title-group { flex-grow: 1; padding-right: 4rem; /* Évite que le texte passe sous les boutons */ }
@@ -261,14 +259,14 @@
         .license-badge { background: rgba(56,189,248,0.1); color: var(--accent); padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.75rem; white-space: nowrap; }
 
         .description { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 1rem; }
-        
+
         /* --- ALIGNEMENT CORRIGÉ POUR LES LABELS --- */
         .meta-group { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem; }
         .meta-row { display: flex; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap; }
         .meta-label { font-size: 0.75rem; color: var(--text-muted); width: 60px; padding-top: 0.4rem; }
-        
+
         .tag { background-color: var(--tag-bg); color: var(--tag-text); padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; border: 1px solid transparent; font-weight: 500; display: inline-flex; align-items: center; }
-        
+
         .pkg-tag { font-family: monospace; background: var(--tag-bg); color: color-mix(in srgb, var(--text-main) 80%, transparent); padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
         .pkg-tag:hover { border-color: var(--accent); color: var(--text-main); background: color-mix(in srgb, var(--text-main) 10%, var(--tag-bg)); }
         .pkg-tag.copied { background: rgba(16, 185, 129, 0.2); border-color: var(--success); color: var(--success); }
@@ -276,7 +274,7 @@
         .card-footer { display: flex; justify-content: flex-end; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border); }
         .btn-link { background-color: transparent; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 8px; transition: background-color 0.2s; }
         .btn-link:hover { background-color: rgba(56, 189, 248, 0.1); }
-        
+
         /* --- BOUTONS UTILISATEUR (TOP RIGHT DE LA CARTE) --- */
         .user-actions {
             position: absolute;
@@ -296,7 +294,7 @@
 
         .empty-state, .error-state { grid-column: 1 / -1; text-align: center; padding: 4rem; color: var(--text-muted); }
         .empty-state i { font-size: 3rem; margin-bottom: 1rem; color: var(--border); }
-        
+
         #toast { visibility: hidden; min-width: 250px; background-color: var(--success); color: #000; text-align: center; border-radius: 8px; padding: 12px; position: fixed; z-index: 1000; left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.3); opacity: 0; transition: opacity 0.3s, bottom 0.3s; }
         #toast.show { visibility: visible; opacity: 1; bottom: 50px; }
     </style>
@@ -333,6 +331,10 @@
         </div>
         <div class="filter-body" id="filterBody">
             <div class="filter-group">
+                <div class="filter-title"><i class="ph ph-swap"></i> Alternatives à</div>
+                <div class="filters" id="alternativeFilters"></div>
+            </div>
+            <div class="filter-group">
                 <div class="filter-title"><i class="ph ph-desktop"></i> Plateformes</div>
                 <div class="filters" id="platformFilters"></div>
             </div>
@@ -354,7 +356,7 @@
     <div class="grid" id="softwareGrid"></div>
     <div id="toast">Copié dans le presse-papier !</div>
 
-    
+
     <!-- Sélecteur de Thème -->
     <div class="theme-settings">
         <div class="theme-modes">
@@ -376,8 +378,8 @@
 
     <script>
         let allData = [];
-        let filters = { platforms: new Set(), packages: new Set(), licenses: new Set(), tags: new Set() };
-        
+        let filters = { platforms: new Set(), packages: new Set(), licenses: new Set(), tags: new Set(), alternatives: new Set() };
+
         // Données Utilisateur (Cookies)
         let userStats = { known: [], installed: [] };
         let userFilters = { known: 'all', installed: 'all' };
@@ -385,7 +387,7 @@
         const grid = document.getElementById('softwareGrid');
         const platformIcons = { "Web": "ph-globe", "Linux": "ph-linux-logo", "Windows": "ph-windows-logo", "macOS": "ph-apple-logo", "Android": "ph-android-logo", "iOS": "ph-device-mobile" };
 
-        
+
         const filterStatesConf = {
             'known': {
                 'all': { text: 'Tous', icon: 'ph ph-eye', color: 'var(--text-muted)' },
@@ -404,7 +406,7 @@
             let current = userFilters[type];
             let nextIndex = (sequence.indexOf(current) + 1) % sequence.length;
             userFilters[type] = sequence[nextIndex];
-            
+
             let conf = filterStatesConf[type][userFilters[type]];
             let iconEl = document.getElementById('icon-' + type);
             let textEl = document.getElementById('text-' + type);
@@ -412,11 +414,11 @@
             iconEl.style.color = conf.color;
             textEl.innerText = conf.text;
             textEl.style.color = conf.color;
-            
+
             applyFilters();
         }
 
-                
+
         // --- GESTION DES THÈMES ---
         let currentTheme = 'dark';
         let currentAccent = 'blue';
@@ -424,7 +426,7 @@
         function applyTheme() {
             document.documentElement.setAttribute('data-theme', currentTheme);
             document.documentElement.setAttribute('data-accent', currentAccent);
-            
+
             document.querySelectorAll('.theme-modes button').forEach(btn => btn.classList.remove('active'));
             const activeThemeBtn = document.querySelector(`.theme-modes button[data-theme-val="${currentTheme}"]`);
             if(activeThemeBtn) activeThemeBtn.classList.add('active');
@@ -445,15 +447,15 @@
         function loadThemeCookie() {
             const match = document.cookie.match(/(^| )themePref=([^;]+)/);
             if (match) {
-                try { 
-                    let pref = JSON.parse(decodeURIComponent(match[2])); 
+                try {
+                    let pref = JSON.parse(decodeURIComponent(match[2]));
                     if(pref.theme) currentTheme = pref.theme;
                     if(pref.accent) currentAccent = pref.accent;
                 } catch(e) {}
             }
             applyTheme();
         }
-        
+
         // Initialisation du thème au démarrage
         loadThemeCookie();
 
@@ -461,7 +463,7 @@
         function loadUserStats() {
             const match = document.cookie.match(/(^| )userStats=([^;]+)/);
             if (match) {
-                try { userStats = JSON.parse(decodeURIComponent(match[2])); } 
+                try { userStats = JSON.parse(decodeURIComponent(match[2])); }
                 catch(e) { console.error("Erreur lecture cookies", e); }
             }
         }
@@ -474,7 +476,7 @@
             if(index > -1) list.splice(index, 1);
             else list.push(appName);
             saveUserStats();
-            applyFilters(); 
+            applyFilters();
         }
 
         function toggleFilters() {
@@ -534,19 +536,21 @@
                 const response = await fetch('./awesome_opensource.json');
                 if (!response.ok) throw new Error('JSON introuvable');
                 allData = await response.json();
-                
+
                 // Tri alphabétique de toutes les applications par nom
                 allData.sort((a, b) => a.name.localeCompare(b.name));
-                
-                let uniquePlatforms = new Set(), uniquePackages = new Set(), uniqueLicenses = new Set(), uniqueTags = new Set();
+
+                let uniquePlatforms = new Set(), uniquePackages = new Set(), uniqueLicenses = new Set(), uniqueTags = new Set(), uniqueAlternatives = new Set();
                 allData.forEach(item => {
                     item.platforms.forEach(p => uniquePlatforms.add(p));
                     if(item.packages) Object.keys(item.packages).forEach(p => uniquePackages.add(p));
                     uniqueLicenses.add(item.license);
                     item.tags.forEach(t => uniqueTags.add(t));
                     uniqueTags.add(item.category);
+                    if(item.alternatives) item.alternatives.forEach(a => uniqueAlternatives.add(a));
                 });
 
+                renderFilters('alternativeFilters', uniqueAlternatives, 'alternatives');
                 renderFilters('platformFilters', uniquePlatforms, 'platforms', platformIcons);
                 renderFilters('packageFilters', uniquePackages, 'packages');
                 renderFilters('licenseFilters', uniqueLicenses, 'licenses');
@@ -567,7 +571,7 @@
             container.querySelectorAll('.filter-btn').forEach(el => {
                 el.addEventListener('click', (e) => {
                     const type = e.currentTarget.dataset.type, value = e.currentTarget.dataset.value;
-                    if (filters[type].has(value)) { filters[type].delete(value); e.currentTarget.classList.remove('active'); } 
+                    if (filters[type].has(value)) { filters[type].delete(value); e.currentTarget.classList.remove('active'); }
                     else { filters[type].add(value); e.currentTarget.classList.add('active'); }
                     applyFilters();
                 });
@@ -578,12 +582,13 @@
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const filtered = allData.filter(item => {
                 const matchesSearch = item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm);
-                
+
                 const matchesPlatforms = filters.platforms.size === 0 || Array.from(filters.platforms).every(p => item.platforms.includes(p));
                 const itemPackages = item.packages ? Object.keys(item.packages) : [];
                 const matchesPackages = filters.packages.size === 0 || Array.from(filters.packages).every(p => itemPackages.includes(p));
                 const matchesLicenses = filters.licenses.size === 0 || filters.licenses.has(item.license);
                 const matchesTags = filters.tags.size === 0 || Array.from(filters.tags).every(t => item.tags.includes(t) || item.category === t);
+                const matchesAlternatives = filters.alternatives.size === 0 || (item.alternatives && Array.from(filters.alternatives).every(a => item.alternatives.includes(a)));
 
                 let matchesKnown = true;
                 if (userFilters.known === 'only') matchesKnown = userStats.known.includes(item.name);
@@ -593,7 +598,7 @@
                 if (userFilters.installed === 'only') matchesInstalled = userStats.installed.includes(item.name);
                 else if (userFilters.installed === 'exclude') matchesInstalled = !userStats.installed.includes(item.name);
 
-                return matchesSearch && matchesPlatforms && matchesPackages && matchesLicenses && matchesTags && matchesKnown && matchesInstalled;
+                return matchesSearch && matchesPlatforms && matchesPackages && matchesLicenses && matchesTags && matchesAlternatives && matchesKnown && matchesInstalled;
             });
             renderCards(filtered);
         }
@@ -609,19 +614,31 @@
             grid.innerHTML = data.map(item => {
                 const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=334155&color=fff&size=128`;
                 const safeName = item.name.replace(/"/g, '&quot;');
-                
+
                 const isKnown = userStats.known.includes(item.name);
                 const isInstalled = userStats.installed.includes(item.name);
-                
+
                 let packagesHtml = '<span class="text-muted">-</span>';
                 if (item.packages && Object.keys(item.packages).length > 0) {
                     packagesHtml = Object.entries(item.packages).map(([manager, pkgName]) => {
                         const cmd = getInstallCommand(manager, pkgName);
-                        const safeCmd = cmd.replace(/"/g, '&quot;'); 
+                        const safeCmd = cmd.replace(/"/g, '&quot;');
                         return `<span class="pkg-tag" title="Clic = Copier" data-cmd="${safeCmd}" onclick="copyToClipboard(this.dataset.cmd, this)">
                                     <i class="ph ph-copy"></i> ${manager}
                                 </span>`;
                     }).join('');
+                }
+
+                let alternativesHtml = '';
+                if (item.alternatives && item.alternatives.length > 0) {
+                    alternativesHtml = `
+                        <div class="meta-row">
+                            <span class="meta-label">Alt à</span>
+                            <div style="display:flex; gap:0.4rem; flex-wrap:wrap; flex:1;">
+                                ${item.alternatives.map(a => `<span class="tag">${a}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
                 }
 
                 // CORRECTION DES CLASSES D'ICÔNES ET ATTRIBUT DATA-NAME
@@ -649,10 +666,11 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="description">${item.description}</div>
-                    
+
                     <div class="meta-group">
+                        ${alternativesHtml}
                         <div class="meta-row">
                             <span class="meta-label">Tags</span>
                             <div style="display:flex; gap:0.4rem; flex-wrap:wrap; flex:1;">
