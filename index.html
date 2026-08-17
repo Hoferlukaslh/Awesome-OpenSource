@@ -7,19 +7,90 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --bg-card: #1e293b;
-            --bg-card-hover: #334155;
+        /* --- THEMES DE BASE --- */
+        :root, [data-theme="dark"] {
+            --base-bg: #0f172a;
+            --base-card: #1e293b;
+            --base-border: #334155;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --border: #334155;
-            --tag-bg: #0f172a;
-            --tag-text: #e2e8f0;
             --success: #10b981;
             --warning: #f59e0b;
         }
+        [data-theme="light"] {
+            --base-bg: #f8fafc;
+            --base-card: #ffffff;
+            --base-border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+        }
+        [data-theme="oled"] {
+            --base-bg: #000000;
+            --base-card: #0a0a0a;
+            --base-border: #262626;
+            --text-main: #f8fafc;
+            --text-muted: #9ca3af;
+        }
+
+        /* --- MIX DYNAMIQUE AVEC L'ACCENT --- */
+        :root {
+            --accent: #38bdf8; /* Défaut */
+            --bg-color: color-mix(in srgb, var(--accent) 6%, var(--base-bg));
+            --bg-card: color-mix(in srgb, var(--accent) 3%, var(--base-card));
+            --border: color-mix(in srgb, var(--accent) 20%, var(--base-border));
+            --tag-bg: color-mix(in srgb, var(--accent) 15%, transparent);
+            --tag-text: var(--accent);
+        }
+
+        /* --- COULEURS D'ACCENT --- */
+        [data-accent="blue"]   { 
+            --accent: #38bdf8; 
+            --bg-color: var(--base-bg);
+            --bg-card: var(--base-card);
+            --border: var(--base-border);
+            --tag-bg: var(--base-border);
+            --tag-text: var(--text-main);
+        }
+        [data-accent="brown"]  { --accent: #d97706; }
+        [data-accent="purple"] { --accent: #a855f7; }
+        [data-accent="yellow"] { --accent: #eab308; }
+        [data-accent="red"]    { --accent: #ef4444; }
+        [data-accent="pink"]   { --accent: #ec4899; }
+        [data-accent="green"]  { --accent: #10b981; }
+        [data-accent="orange"] { --accent: #f97316; }
+
+        /* --- THEME SETTINGS MENU --- */
+        .theme-settings {
+            position: fixed;
+            bottom: 2rem;
+            left: 2.5rem; /* Aligné avec les icones du haut */
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            z-index: 100;
+            align-items: center;
+        }
+        .theme-modes { display: flex; gap: 1rem; justify-content: center; }
+        .theme-modes button {
+            background: transparent; border: none;
+            color: var(--text-muted);
+            padding: 0; cursor: pointer; transition: transform 0.2s, color 0.2s;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+        }
+        .theme-modes button:hover {
+            transform: translateY(-2px); color: var(--text-main);
+        }
+        .theme-modes button.active {
+            color: var(--accent);
+        }
+        .accent-colors { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; justify-items: center; }
+        .color-dot {
+            width: 22px; height: 22px; border-radius: 50%; cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s; border: 2px solid transparent;
+        }
+        .color-dot:hover { transform: scale(1.2); }
+        .color-dot.active { box-shadow: 0 0 0 2px var(--bg-card), 0 0 0 4px var(--text-main); }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -27,7 +98,7 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
-            padding: 2rem;
+            padding: 2rem 2rem 2rem 7rem;
             min-height: 100vh;
             position: relative;
         }
@@ -64,10 +135,9 @@
         .quick-action-icon { font-size: 1.8rem; }
         .quick-action-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s; }
         @media (max-width: 1400px) {
-            .user-quick-actions {
-                top: 1rem;
-                left: 1rem;
-            }
+            body { padding-left: 5.5rem; }
+            .user-quick-actions { top: 1.5rem; left: 1rem; }
+            .theme-settings { left: 1.5rem; }
         }
 
         @media (max-width: 768px) {
@@ -91,7 +161,7 @@
                 background: var(--bg-card);
                 padding: 0.6rem 2.5rem;
                 border-radius: 9999px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+                box-shadow: 0 10px 25px color-mix(in srgb, var(--text-main) 15%, transparent);
                 border: 1px solid var(--border);
                 gap: 2.5rem;
             }
@@ -135,6 +205,20 @@
             .filter-body {
                 padding: 0 1rem 1rem 1rem;
             }
+            .theme-settings {
+                position: static;
+                margin: 2rem auto;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: max-content;
+                max-width: 100%;
+            }
+            .accent-colors {
+                display: flex;
+            }
+
         }
 
 
@@ -148,8 +232,8 @@
         input[type="text"]:focus { border-color: var(--accent); }
 
         .filter-section { max-width: 1200px; margin: 0 auto 2rem auto; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
-        .filter-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; cursor: pointer; background-color: rgba(255,255,255,0.02); transition: background-color 0.2s; user-select: none; }
-        .filter-header:hover { background-color: rgba(255,255,255,0.05); }
+        .filter-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; cursor: pointer; background-color: color-mix(in srgb, var(--text-main) 2%, transparent); transition: background-color 0.2s; user-select: none; }
+        .filter-header:hover { background-color: color-mix(in srgb, var(--text-main) 5%, transparent); }
         .filter-header h2 { font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-main); font-weight: 600; margin: 0; }
         .filter-caret { transition: transform 0.3s; font-size: 1.2rem; color: var(--text-muted); }
         .filter-caret.open { transform: rotate(180deg); }
@@ -161,7 +245,7 @@
         .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .filter-btn { background-color: var(--bg-color); border: 1px solid var(--border); color: var(--text-muted); padding: 0.4rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; user-select: none; }
         .filter-btn:hover { border-color: var(--accent); color: var(--text-main); }
-        .filter-btn.active { background-color: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 600; }
+        .filter-btn.active { background-color: var(--accent); color: var(--base-bg); border-color: var(--accent); font-weight: 600; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; max-width: 1400px; margin: 0 auto; }
         
@@ -183,10 +267,10 @@
         .meta-row { display: flex; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap; }
         .meta-label { font-size: 0.75rem; color: var(--text-muted); width: 60px; padding-top: 0.4rem; }
         
-        .tag { background-color: #334155; color: #e2e8f0; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; border: 1px solid transparent; font-weight: 500; display: inline-flex; align-items: center; }
+        .tag { background-color: var(--tag-bg); color: var(--tag-text); padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; border: 1px solid transparent; font-weight: 500; display: inline-flex; align-items: center; }
         
-        .pkg-tag { font-family: monospace; background: #334155; color: #cbd5e1; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
-        .pkg-tag:hover { border-color: var(--accent); color: #fff; background: #475569; }
+        .pkg-tag { font-family: monospace; background: var(--tag-bg); color: color-mix(in srgb, var(--text-main) 80%, transparent); padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .pkg-tag:hover { border-color: var(--accent); color: var(--text-main); background: color-mix(in srgb, var(--text-main) 10%, var(--tag-bg)); }
         .pkg-tag.copied { background: rgba(16, 185, 129, 0.2); border-color: var(--success); color: var(--success); }
 
         .card-footer { display: flex; justify-content: flex-end; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border); }
@@ -202,7 +286,7 @@
             gap: 0.4rem;
         }
         .action-btn {
-            background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border); color: var(--text-muted);
+            background: var(--bg-color); border: 1px solid var(--border); color: var(--text-muted);
             border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
             cursor: pointer; transition: all 0.2s; font-size: 1.1rem;
         }
@@ -270,6 +354,26 @@
     <div class="grid" id="softwareGrid"></div>
     <div id="toast">Copié dans le presse-papier !</div>
 
+    
+    <!-- Sélecteur de Thème -->
+    <div class="theme-settings">
+        <div class="theme-modes">
+            <button data-theme-val="light" onclick="setTheme('light')" title="Mode Clair"><i class="ph ph-sun"></i></button>
+            <button data-theme-val="dark" onclick="setTheme('dark')" title="Mode Sombre"><i class="ph ph-moon"></i></button>
+            <button data-theme-val="oled" onclick="setTheme('oled')" title="Mode OLED (Noir)"><i class="ph ph-drop-half-bottom"></i></button>
+        </div>
+        <div class="accent-colors">
+            <div class="color-dot" data-accent-val="blue" style="background: #38bdf8" onclick="setAccent('blue')" title="Bleu"></div>
+            <div class="color-dot" data-accent-val="brown" style="background: #d97706" onclick="setAccent('brown')" title="Brun"></div>
+            <div class="color-dot" data-accent-val="purple" style="background: #a855f7" onclick="setAccent('purple')" title="Violet"></div>
+            <div class="color-dot" data-accent-val="yellow" style="background: #eab308" onclick="setAccent('yellow')" title="Jaune"></div>
+            <div class="color-dot" data-accent-val="red" style="background: #ef4444" onclick="setAccent('red')" title="Rouge"></div>
+            <div class="color-dot" data-accent-val="pink" style="background: #ec4899" onclick="setAccent('pink')" title="Rose"></div>
+            <div class="color-dot" data-accent-val="green" style="background: #10b981" onclick="setAccent('green')" title="Vert"></div>
+            <div class="color-dot" data-accent-val="orange" style="background: #f97316" onclick="setAccent('orange')" title="Orange"></div>
+        </div>
+    </div>
+
     <script>
         let allData = [];
         let filters = { platforms: new Set(), packages: new Set(), licenses: new Set(), tags: new Set() };
@@ -312,7 +416,48 @@
             applyFilters();
         }
 
-                // --- GESTION DES COOKIES ---
+                
+        // --- GESTION DES THÈMES ---
+        let currentTheme = 'dark';
+        let currentAccent = 'blue';
+
+        function applyTheme() {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            document.documentElement.setAttribute('data-accent', currentAccent);
+            
+            document.querySelectorAll('.theme-modes button').forEach(btn => btn.classList.remove('active'));
+            const activeThemeBtn = document.querySelector(`.theme-modes button[data-theme-val="${currentTheme}"]`);
+            if(activeThemeBtn) activeThemeBtn.classList.add('active');
+
+            document.querySelectorAll('.color-dot').forEach(dot => dot.classList.remove('active'));
+            const activeAccentBtn = document.querySelector(`.color-dot[data-accent-val="${currentAccent}"]`);
+            if(activeAccentBtn) activeAccentBtn.classList.add('active');
+        }
+
+        function setTheme(theme) { currentTheme = theme; saveThemeCookie(); applyTheme(); }
+        function setAccent(accent) { currentAccent = accent; saveThemeCookie(); applyTheme(); }
+
+        function saveThemeCookie() {
+            let pref = { theme: currentTheme, accent: currentAccent };
+            document.cookie = "themePref=" + encodeURIComponent(JSON.stringify(pref)) + "; max-age=" + (60*60*24*365) + "; path=/";
+        }
+
+        function loadThemeCookie() {
+            const match = document.cookie.match(/(^| )themePref=([^;]+)/);
+            if (match) {
+                try { 
+                    let pref = JSON.parse(decodeURIComponent(match[2])); 
+                    if(pref.theme) currentTheme = pref.theme;
+                    if(pref.accent) currentAccent = pref.accent;
+                } catch(e) {}
+            }
+            applyTheme();
+        }
+        
+        // Initialisation du thème au démarrage
+        loadThemeCookie();
+
+        // --- GESTION DES COOKIES ---
         function loadUserStats() {
             const match = document.cookie.match(/(^| )userStats=([^;]+)/);
             if (match) {

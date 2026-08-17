@@ -668,6 +668,64 @@
     ]
   },
   {
+    "name": "LibreOffice",
+    "category": "Productivité",
+    "description": "Suite bureautique libre, puissante et complète (traitement de texte, tableur, présentation).",
+    "license": "MPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "libreoffice",
+      "pacman": "libreoffice-fresh",
+      "dnf": "libreoffice",
+      "flatpak": "org.libreoffice.LibreOffice",
+      "snap": "libreoffice",
+      "winget": "TheDocumentFoundation.LibreOffice",
+      "chocolatey": "libreoffice-fresh",
+      "scoop": "libreoffice"
+    },
+    "url": "https://www.libreoffice.org",
+    "logo": "https://icon.horse/icon/www.libreoffice.org",
+    "tags": [
+      "Bureautique",
+      "Desktop",
+      "Suite"
+    ]
+  },
+  {
+    "name": "ONLYOFFICE",
+    "category": "Productivité",
+    "description": "Suite bureautique sécurisée, collaborative et hautement compatible avec les formats Microsoft Office.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "packages": {
+      "docker": "onlyoffice/documentserver",
+      "aur": "onlyoffice-bin",
+      "flatpak": "org.onlyoffice.desktopeditors",
+      "snap": "onlyoffice-desktopeditors",
+      "winget": "ONLYOFFICE.DesktopEditors",
+      "chocolatey": "onlyoffice",
+      "scoop": "onlyoffice"
+    },
+    "url": "https://www.onlyoffice.com",
+    "logo": "https://icon.horse/icon/www.onlyoffice.com",
+    "tags": [
+      "Bureautique",
+      "Collaboration",
+      "Desktop"
+    ]
+  },
+  {
     "name": "FreeFileSync",
     "category": "Utilitaires",
     "description": "Logiciel de comparaison et de synchronisation de dossiers (Attention : usage commercial soumis à licence payante en violation de la GPL).",
