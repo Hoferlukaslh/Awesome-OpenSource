@@ -29,6 +29,82 @@
       "Self-Hosted",
       "Collaboration"
     ]
+  },{
+    "name": "LibreWolf",
+    "category": "Utilitaires",
+    "description": "Navigateur web open source axé sur la vie privée, la sécurité et la liberté, basé sur Firefox.",
+    "license": "MPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "aur": "librewolf-bin", "flatpak": "io.gitlab.librewolf-community", "winget": "LibreWolf.LibreWolf" },
+    "url": "https://librewolf.net/",
+    "logo": "https://icon.horse/icon/librewolf.net",
+    "tags": ["Web", "Navigateur", "Vie Privée"]
+  },
+  {
+    "name": "Firefox",
+    "category": "Utilitaires",
+    "description": "Navigateur web libre et respectueux de la vie privée développé par Mozilla.",
+    "license": "MPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
+    "packages": { "apt": "firefox", "pacman": "firefox", "flatpak": "org.mozilla.firefox", "snap": "firefox", "winget": "Mozilla.Firefox" },
+    "url": "https://www.mozilla.org/firefox/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1280px-Firefox_logo%2C_2019.svg.png",
+    "tags": ["Web", "Navigateur"]
+  },
+  {
+    "name": "Sumatra PDF",
+    "category": "Productivité",
+    "description": "Lecteur de PDF, eBook (ePub, Mobi), XPS, DjVu, CHM et bandes dessinées ultra-léger et rapide.",
+    "license": "AGPL-3.0",
+    "platforms": ["Windows"],
+    "packages": { "winget": "SumatraPDF.SumatraPDF", "chocolatey": "sumatrapdf", "scoop": "sumatrapdf" },
+    "url": "https://www.sumatrapdfreader.org/",
+    "logo": "https://icon.horse/icon/www.sumatrapdfreader.org",
+    "tags": ["PDF", "Lecteur", "Minimaliste", "Windows"]
+  },
+  {
+    "name": "Okular",
+    "category": "Productivité",
+    "description": "Visionneuse de documents universelle multiplateforme développée par KDE.",
+    "license": "GPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "okular", "pacman": "okular", "flatpak": "org.kde.okular", "winget": "KDE.Okular" },
+    "url": "https://okular.kde.org/",
+    "logo": "https://icon.horse/icon/okular.kde.org",
+    "tags": ["PDF", "Lecteur", "Document"]
+  },
+  {
+    "name": "Thunderbird",
+    "category": "Productivité",
+    "description": "Application de messagerie libre, open source et multiplateforme pour gérer vos e-mails et agendas.",
+    "license": "MPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "thunderbird", "pacman": "thunderbird", "flatpak": "org.mozilla.Thunderbird", "snap": "thunderbird", "winget": "Mozilla.Thunderbird" },
+    "url": "https://www.thunderbird.net/",
+    "logo": "https://icon.horse/icon/www.thunderbird.net",
+    "tags": ["Messagerie", "Email", "RSS"]
+  },
+  {
+    "name": "7-Zip",
+    "category": "Utilitaires",
+    "description": "Utilitaire d'archivage de fichiers avec un taux de compression très élevé.",
+    "license": "LGPL-2.1",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "p7zip-full", "pacman": "7-zip", "winget": "7zip.7zip", "chocolatey": "7zip", "scoop": "7zip" },
+    "url": "https://www.7-zip.org/",
+    "logo": "https://icon.horse/icon/www.7-zip.org",
+    "tags": ["Archive", "Compression", "Système"]
+  },
+  {
+    "name": "Zen Browser",
+    "category": "Utilitaires",
+    "description": "Navigateur web minimaliste, axé sur la vie privée et la productivité (basé sur Firefox).",
+    "license": "MPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "aur": "zen-browser-bin", "flatpak": "io.github.zen_browser.zen", "winget": "ZenBrowser.ZenBrowser" },
+    "url": "https://zen-browser.app/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/37/7-Zip_Logo.png",
+    "tags": ["Web", "Navigateur", "Minimaliste", "Vie Privée"]
   },
   {
     "name": "Immich",
@@ -546,6 +622,61 @@
       "PDF",
       "Desktop"
     ]
+  },
+  {
+    "name": "Gitea",
+    "category": "Développement",
+    "description": "Plateforme d'hébergement de code (Git) légère et auto-hébergée (fork communautaire de Gogs).",
+    "license": "MIT",
+    "platforms": ["Web", "Linux", "Windows", "macOS"],
+    "packages": { "docker": "gitea/gitea", "pacman": "gitea", "snap": "gitea", "aur": "gitea-bin" },
+    "url": "https://gitea.io/",
+    "logo": "https://icon.horse/icon/gitea.io",
+    "tags": ["Git", "Self-Hosted", "Cloud", "Code"]
+  },
+  {
+    "name": "Freeplane",
+    "category": "Productivité",
+    "description": "Logiciel de mind mapping et d'organisation des connaissances libre et très puissant (évolution de FreeMind).",
+    "license": "GPL-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "freeplane", "pacman": "freeplane", "flatpak": "org.freeplane.App", "winget": "Freeplane.Freeplane" },
+    "url": "https://www.freeplane.org/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Freeplane-icon-2022.svg/langfr-1280px-Freeplane-icon-2022.svg.png",
+    "tags": ["Mind-Mapping", "Organisation", "Notes"]
+  },
+  {
+    "name": "Krita",
+    "category": "Multimédia",
+    "description": "Logiciel professionnel de peinture numérique et d'animation 2D, conçu pour les illustrateurs et artistes.",
+    "license": "GPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "krita", "pacman": "krita", "flatpak": "org.kde.krita", "snap": "krita", "winget": "KDE.Krita" },
+    "url": "https://krita.org/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/langfr-1280px-Calligrakrita-base.svg.png",
+    "tags": ["Dessin", "Illustration", "2D", "Design"]
+  },
+  {
+    "name": "Revolt",
+    "category": "Utilitaires",
+    "description": "Alternative open source à Discord, légère et axée sur la protection de la vie privée.",
+    "license": "AGPL-3.0",
+    "platforms": ["Web", "Linux", "Windows", "macOS", "Android"],
+    "packages": { "aur": "revolt-desktop-bin", "flatpak": "chat.revolt.RevoltDesktop", "winget": "Revolt.Revolt" },
+    "url": "https://revolt.chat/",
+    "logo": "https://icon.horse/icon/revolt.chat",
+    "tags": ["Messagerie", "Chat", "Discord", "Vie Privée"]
+  },
+  {
+    "name": "Signal",
+    "category": "Utilitaires",
+    "description": "Application de messagerie instantanée sécurisée avec chiffrement de bout en bout.",
+    "license": "AGPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
+    "packages": { "apt": "signal-desktop", "pacman": "signal-desktop", "flatpak": "org.signal.Signal", "snap": "signal-desktop", "winget": "OpenWhisperSystems.Signal" },
+    "url": "https://signal.org/",
+    "logo": "https://icon.horse/icon/signal.org",
+    "tags": ["Messagerie", "Sécurité", "Chiffrement", "Vie Privée"]
   },
   {
     "name": "Bento",
@@ -1514,6 +1645,72 @@
       "Diagrammes",
       "Design"
     ]
+  },
+  {
+    "name": "VSCodium",
+    "category": "Développement",
+    "description": "Binaires open source de VS Code, sans la télémétrie et le pistage de Microsoft.",
+    "license": "MIT",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "aur": "vscodium-bin", "flatpak": "com.vscodium.codium", "snap": "codium", "winget": "VSCodium.VSCodium", "scoop": "vscodium" },
+    "url": "https://vscodium.com/",
+    "logo": "https://icon.horse/icon/vscodium.com",
+    "tags": ["IDE", "Code", "Dev"]
+  },
+  {
+    "name": "Godot Engine",
+    "category": "Développement",
+    "description": "Moteur de jeu 2D et 3D open source puissant, complet et multiplateforme.",
+    "license": "MIT",
+    "platforms": ["Linux", "Windows", "macOS", "Web", "Android"],
+    "packages": { "pacman": "godot", "flatpak": "org.godotengine.Godot", "winget": "GodotEngine.GodotEngine", "scoop": "godot" },
+    "url": "https://godotengine.org/",
+    "logo": "https://icon.horse/icon/godotengine.org",
+    "tags": ["Jeu", "3D", "2D", "Moteur"]
+  },
+  {
+    "name": "Grafana",
+    "category": "Cloud & Serveur",
+    "description": "Plateforme phare d'analyse et de surveillance interactive (création de dashboards).",
+    "license": "AGPL-3.0",
+    "platforms": ["Web", "Linux", "Windows", "macOS"],
+    "packages": { "apt": "grafana", "pacman": "grafana", "docker": "grafana/grafana" },
+    "url": "https://grafana.com/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/langfr-1280px-Grafana_logo.svg.png",
+    "tags": ["Dashboard", "Monitoring", "Métriques", "Self-Hosted"]
+  },
+  {
+    "name": "AppFlowy",
+    "category": "Productivité",
+    "description": "Alternative open source à Notion, axée sur la vie privée et le stockage de données en local.",
+    "license": "AGPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS"],
+    "packages": { "aur": "appflowy", "flatpak": "io.appflowy.AppFlowy", "winget": "AppFlowy.AppFlowy" },
+    "url": "https://www.appflowy.io/",
+    "logo": "https://icon.horse/icon/www.appflowy.io",
+    "tags": ["PKM", "Notes", "Organisation", "Vie Privée"]
+  },
+  {
+    "name": "RustDesk",
+    "category": "Utilitaires",
+    "description": "Logiciel de bureau à distance open source écrit en Rust. L'alternative parfaite à TeamViewer.",
+    "license": "AGPL-3.0",
+    "platforms": ["Linux", "Windows", "macOS", "Android", "iOS", "Web"],
+    "packages": { "aur": "rustdesk", "flatpak": "com.rustdesk.RustDesk", "winget": "RustDesk.RustDesk" },
+    "url": "https://rustdesk.com/",
+    "logo": "https://icon.horse/icon/rustdesk.com",
+    "tags": ["Réseau", "Bureau à distance", "Rust"]
+  },
+  {
+    "name": "Podman",
+    "category": "Développement",
+    "description": "Moteur de conteneurs sans démon (daemonless) et rootless, alternative directe à Docker.",
+    "license": "Apache-2.0",
+    "platforms": ["Linux", "Windows", "macOS"],
+    "packages": { "apt": "podman", "pacman": "podman", "dnf": "podman", "winget": "RedHat.Podman-Desktop" },
+    "url": "https://podman.io/",
+    "logo": "https://icon.horse/icon/podman.io",
+    "tags": ["Conteneurs", "Docker", "Système", "CLI"]
   },
   {
     "name": "Teams for Linux",
