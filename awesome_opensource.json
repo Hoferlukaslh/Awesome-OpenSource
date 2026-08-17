@@ -33,7 +33,8 @@
       "Google Drive",
       "Dropbox",
       "Microsoft 365"
-    ]
+    ],
+    "repo": "https://github.com/nextcloud/server"
   },
   {
     "name": "LibreWolf",
@@ -60,7 +61,8 @@
     "alternatives": [
       "Google Chrome",
       "Microsoft Edge"
-    ]
+    ],
+    "repo": "https://gitlab.com/librewolf-community/browser"
   },
   {
     "name": "Firefox",
@@ -90,7 +92,8 @@
     "alternatives": [
       "Google Chrome",
       "Safari"
-    ]
+    ],
+    "repo": "https://github.com/mozilla/gecko-dev"
   },
   {
     "name": "Sumatra PDF",
@@ -115,7 +118,8 @@
     ],
     "alternatives": [
       "Adobe Acrobat Reader"
-    ]
+    ],
+    "repo": "https://github.com/sumatrapdfreader/sumatrapdf"
   },
   {
     "name": "Okular",
@@ -142,7 +146,8 @@
     ],
     "alternatives": [
       "Adobe Acrobat Reader"
-    ]
+    ],
+    "repo": "https://invent.kde.org/graphics/okular"
   },
   {
     "name": "Thunderbird",
@@ -171,7 +176,8 @@
     "alternatives": [
       "Microsoft Outlook",
       "Apple Mail"
-    ]
+    ],
+    "repo": "https://github.com/mozilla/thunderbird"
   },
   {
     "name": "7-Zip",
@@ -200,7 +206,8 @@
     "alternatives": [
       "WinRAR",
       "WinZip"
-    ]
+    ],
+    "repo": "https://github.com/ip7z/7zip"
   },
   {
     "name": "Zen Browser",
@@ -228,7 +235,8 @@
     "alternatives": [
       "Arc Browser",
       "Google Chrome"
-    ]
+    ],
+    "repo": "https://github.com/zen-browser/desktop"
   },
   {
     "name": "Immich",
@@ -254,7 +262,8 @@
       "Google Photos",
       "Apple Photos",
       "Amazon Photos"
-    ]
+    ],
+    "repo": "https://github.com/immich-app/immich"
   },
   {
     "name": "Glance",
@@ -273,7 +282,8 @@
       "Dashboard",
       "Self-Hosted",
       "RSS"
-    ]
+    ],
+    "repo": "https://github.com/glanceapp/glance"
   },
   {
     "name": "Penpot",
@@ -297,7 +307,8 @@
       "Figma",
       "Adobe XD",
       "Sketch"
-    ]
+    ],
+    "repo": "https://github.com/penpot/penpot"
   },
   {
     "name": "Trek",
@@ -319,7 +330,8 @@
     "alternatives": [
       "Polarsteps",
       "Wanderlog"
-    ]
+    ],
+    "repo": "https://github.com/liketrek/TREK"
   },
   {
     "name": "NetAlertX",
@@ -341,7 +353,8 @@
     ],
     "alternatives": [
       "Fing"
-    ]
+    ],
+    "repo": "https://github.com/netalertx/netalertx"
   },
   {
     "name": "MariaDB",
@@ -370,7 +383,8 @@
     "alternatives": [
       "MySQL",
       "Microsoft SQL Server"
-    ]
+    ],
+    "repo": "https://github.com/MariaDB/server"
   },
   {
     "name": "phpMyAdmin",
@@ -391,7 +405,8 @@
       "Base de données",
       "Serveur",
       "Self-Hosted"
-    ]
+    ],
+    "repo": "https://github.com/phpmyadmin/phpmyadmin"
   },
   {
     "name": "Trivy",
@@ -417,7 +432,8 @@
       "Sécurité",
       "DevSecOps",
       "CLI"
-    ]
+    ],
+    "repo": "https://github.com/aquasecurity/trivy"
   },
   {
     "name": "Nginx UI",
@@ -440,7 +456,8 @@
     ],
     "alternatives": [
       "Nginx Proxy Manager"
-    ]
+    ],
+    "repo": "https://github.com/0xJacky/nginx-ui"
   },
   {
     "name": "Silo-Server",
@@ -464,7 +481,8 @@
     "alternatives": [
       "Plex",
       "Emby"
-    ]
+    ],
+    "repo": "https://github.com/Silo-Server/silo-server"
   },
   {
     "name": "OBS Studio",
@@ -494,7 +512,8 @@
     "alternatives": [
       "XSplit",
       "Streamlabs"
-    ]
+    ],
+    "repo": "https://github.com/obsproject/obs-studio"
   },
   {
     "name": "yt-dlp",
@@ -522,7 +541,8 @@
     ],
     "alternatives": [
       "4K Video Downloader"
-    ]
+    ],
+    "repo": "https://github.com/yt-dlp/yt-dlp"
   },
   {
     "name": "yt-dlp-webui",
@@ -541,7 +561,8 @@
       "Web",
       "Self-Hosted",
       "Vidéo"
-    ]
+    ],
+    "repo": "https://github.com/marcopiovanello/yt-dlp-web-ui"
   },
   {
     "name": "Jellyfin",
@@ -571,7 +592,8 @@
     "alternatives": [
       "Plex",
       "Emby"
-    ]
+    ],
+    "repo": "https://github.com/jellyfin/jellyfin"
   },
   {
     "name": "Fladder",
@@ -592,7 +614,8 @@
       "Multimédia",
       "Streaming",
       "Frontend"
-    ]
+    ],
+    "repo": "https://github.com/DonutWare/Fladder"
   },
   {
     "name": "Clapshot",
@@ -614,7 +637,8 @@
     ],
     "alternatives": [
       "Frame.io"
-    ]
+    ],
+    "repo": "https://github.com/elonen/clapshot"
   },
   {
     "name": "PhotoGIMP",
@@ -635,7 +659,8 @@
     ],
     "alternatives": [
       "Photoshop"
-    ]
+    ],
+    "repo": "https://github.com/Diolinux/PhotoGIMP"
   },
   {
     "name": "RapidRAW",
@@ -658,7 +683,8 @@
     ],
     "alternatives": [
       "Adobe Lightroom"
-    ]
+    ],
+    "repo": "https://github.com/CyberTimon/RapidRAW"
   },
   {
     "name": "xl-converter",
@@ -677,7 +703,8 @@
     "tags": [
       "Image",
       "Conversion"
-    ]
+    ],
+    "repo": "https://github.com/JacobDev1/xl-converter"
   },
   {
     "name": "fooyin",
@@ -703,7 +730,8 @@
       "Foobar2000",
       "Winamp",
       "AIMP"
-    ]
+    ],
+    "repo": "https://github.com/fooyin/fooyin"
   },
   {
     "name": "ImageMagick",
@@ -728,7 +756,8 @@
       "Image",
       "CLI",
       "Conversion"
-    ]
+    ],
+    "repo": "https://github.com/ImageMagick/ImageMagick"
   },
   {
     "name": "SubtitleEdit",
@@ -752,7 +781,8 @@
     ],
     "alternatives": [
       "Aegisub"
-    ]
+    ],
+    "repo": "https://github.com/SubtitleEdit/subtitleedit"
   },
   {
     "name": "Trilium Notes",
@@ -782,7 +812,8 @@
       "Evernote",
       "Notion",
       "Obsidian"
-    ]
+    ],
+    "repo": "https://github.com/zadam/trilium"
   },
   {
     "name": "Xournal++",
@@ -810,7 +841,8 @@
     "alternatives": [
       "GoodNotes",
       "Notability"
-    ]
+    ],
+    "repo": "https://github.com/xournalpp/xournalpp"
   },
   {
     "name": "Bento",
@@ -831,7 +863,8 @@
     "alternatives": [
       "Microsoft Office",
       "Google Workspace"
-    ]
+    ],
+    "repo": "https://github.com/nyblnet/bento"
   },
   {
     "name": "OpenNutriTracker",
@@ -855,7 +888,8 @@
       "MyFitnessPal",
       "Yuka",
       "MacroFactor"
-    ]
+    ],
+    "repo": "https://github.com/simonoppowa/OpenNutriTracker"
   },
   {
     "name": "ScholarLog",
@@ -872,7 +906,8 @@
     "tags": [
       "Éducation",
       "Productivité"
-    ]
+    ],
+    "repo": "https://github.com/Hoferlukaslh/ScholarLog"
   },
   {
     "name": "LocalSend",
@@ -903,7 +938,8 @@
     "alternatives": [
       "AirDrop",
       "Quick Share"
-    ]
+    ],
+    "repo": "https://github.com/localsend/localsend"
   },
   {
     "name": "Whatsie",
@@ -926,7 +962,8 @@
     ],
     "alternatives": [
       "WhatsApp Desktop"
-    ]
+    ],
+    "repo": "https://github.com/keshavbhatt/whatsie"
   },
   {
     "name": "ClamUI",
@@ -950,7 +987,8 @@
     "alternatives": [
       "Avast",
       "Windows Defender"
-    ]
+    ],
+    "repo": "https://github.com/linx-systems/clamui"
   },
   {
     "name": "LibreOffice",
@@ -982,7 +1020,8 @@
     "alternatives": [
       "Microsoft Office",
       "Google Workspace"
-    ]
+    ],
+    "repo": "https://github.com/LibreOffice/core"
   },
   {
     "name": "ONLYOFFICE",
@@ -1016,12 +1055,13 @@
     "alternatives": [
       "Microsoft Office",
       "Google Workspace"
-    ]
+    ],
+    "repo": "https://github.com/ONLYOFFICE/DocumentServer"
   },
   {
     "name": "FreeFileSync",
     "category": "Utilitaires",
-    "description": "Logiciel de comparaison et de synchronisation de dossiers. (Attention : usage commercial soumis à licence payante en violation de la GPL).",
+    "description": "Logiciel de comparaison et de synchronisation de dossiers (Attention : usage commercial soumis à licence payante en violation de la GPL).",
     "license": "Proprietary / Custom",
     "platforms": [
       "Linux",
@@ -1042,7 +1082,8 @@
     "alternatives": [
       "GoodSync",
       "SyncBack"
-    ]
+    ],
+    "repo": "https://github.com/hkneptune/FreeFileSync"
   },
   {
     "name": "GalaxyBudsClient",
@@ -1066,7 +1107,8 @@
     ],
     "alternatives": [
       "Galaxy Wearable"
-    ]
+    ],
+    "repo": "https://github.com/timschneeb/GalaxyBudsClient"
   },
   {
     "name": "Color Picker (Gcolor3)",
@@ -1089,7 +1131,8 @@
     ],
     "alternatives": [
       "PowerToys ColorPicker"
-    ]
+    ],
+    "repo": "https://github.com/Hjdskes/gcolor3"
   },
   {
     "name": "ripgrep",
@@ -1117,7 +1160,8 @@
     ],
     "alternatives": [
       "grep"
-    ]
+    ],
+    "repo": "https://github.com/BurntSushi/ripgrep"
   },
   {
     "name": "Universal Android Debloater",
@@ -1138,7 +1182,8 @@
     "tags": [
       "Android",
       "Système"
-    ]
+    ],
+    "repo": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation"
   },
   {
     "name": "Scrib",
@@ -1159,7 +1204,8 @@
     "alternatives": [
       "Google Recorder",
       "Otter.ai"
-    ]
+    ],
+    "repo": "https://github.com/23rd/Scrib"
   },
   {
     "name": "Winboat",
@@ -1183,7 +1229,8 @@
       "Wine",
       "CrossOver",
       "Proton"
-    ]
+    ],
+    "repo": "https://github.com/winboat-org/winboat"
   },
   {
     "name": "OpenUpTimeLab",
@@ -1205,7 +1252,8 @@
     "alternatives": [
       "UptimeRobot",
       "Kuma"
-    ]
+    ],
+    "repo": "https://github.com/Hoferlukaslh/OpenUpTimeLab"
   },
   {
     "name": "Mission Center",
@@ -1229,7 +1277,8 @@
     "alternatives": [
       "Gestionnaire des tâches Windows",
       "Moniteur d'activité macOS"
-    ]
+    ],
+    "repo": "https://gitlab.com/mission-center-devs/mission-center"
   },
   {
     "name": "Btop",
@@ -1257,7 +1306,8 @@
       "htop",
       "top",
       "Gestionnaire des tâches Windows"
-    ]
+    ],
+    "repo": "https://github.com/aristocratos/btop"
   },
   {
     "name": "OpenRGB",
@@ -1286,7 +1336,8 @@
       "Corsair iCUE",
       "Razer Synapse",
       "Aura Sync"
-    ]
+    ],
+    "repo": "https://gitlab.com/CalcProgrammer1/OpenRGB"
   },
   {
     "name": "Wails",
@@ -1312,7 +1363,8 @@
     "alternatives": [
       "Electron",
       "Tauri"
-    ]
+    ],
+    "repo": "https://github.com/wailsapp/wails"
   },
   {
     "name": "Fyne",
@@ -1337,7 +1389,8 @@
     "alternatives": [
       "Electron",
       "Qt"
-    ]
+    ],
+    "repo": "https://github.com/fyne-io/fyne"
   },
   {
     "name": "Avalonia",
@@ -1363,7 +1416,8 @@
     "alternatives": [
       "WPF",
       "MAUI"
-    ]
+    ],
+    "repo": "https://github.com/AvaloniaUI/Avalonia"
   },
   {
     "name": "SharpIDE",
@@ -1386,7 +1440,8 @@
     "alternatives": [
       "Visual Studio",
       "JetBrains Rider"
-    ]
+    ],
+    "repo": "https://github.com/MattParkerDev/SharpIDE"
   },
   {
     "name": "Node-RED",
@@ -1412,7 +1467,8 @@
     "alternatives": [
       "Zapier",
       "Make"
-    ]
+    ],
+    "repo": "https://github.com/node-red/node-red"
   },
   {
     "name": "Comaps",
@@ -1439,7 +1495,8 @@
     "alternatives": [
       "Google Maps",
       "Apple Plans"
-    ]
+    ],
+    "repo": "https://github.com/comapsapp/comaps"
   },
   {
     "name": "Millennium",
@@ -1459,7 +1516,8 @@
       "Gaming",
       "Steam",
       "Modding"
-    ]
+    ],
+    "repo": "https://github.com/SteamClientHomebrew/Millennium"
   },
   {
     "name": "Moonlight",
@@ -1488,7 +1546,8 @@
     "alternatives": [
       "Steam Link",
       "Parsec"
-    ]
+    ],
+    "repo": "https://github.com/moonlight-stream/moonlight-qt"
   },
   {
     "name": "GIMP",
@@ -1516,7 +1575,8 @@
     "alternatives": [
       "Adobe Photoshop",
       "Affinity Photo"
-    ]
+    ],
+    "repo": "https://gitlab.gnome.org/GNOME/gimp"
   },
   {
     "name": "Audacity",
@@ -1542,7 +1602,8 @@
     ],
     "alternatives": [
       "Adobe Audition"
-    ]
+    ],
+    "repo": "https://github.com/audacity/audacity"
   },
   {
     "name": "Darktable",
@@ -1568,7 +1629,8 @@
     ],
     "alternatives": [
       "Adobe Lightroom"
-    ]
+    ],
+    "repo": "https://github.com/darktable-org/darktable"
   },
   {
     "name": "Inkscape",
@@ -1596,7 +1658,8 @@
     "alternatives": [
       "Adobe Illustrator",
       "Affinity Designer"
-    ]
+    ],
+    "repo": "https://gitlab.com/inkscape/inkscape"
   },
   {
     "name": "Blender",
@@ -1624,7 +1687,8 @@
     "alternatives": [
       "Autodesk Maya",
       "Cinema 4D"
-    ]
+    ],
+    "repo": "https://projects.blender.org/blender/blender"
   },
   {
     "name": "KiCad",
@@ -1651,7 +1715,8 @@
     "alternatives": [
       "Altium Designer",
       "Autodesk Eagle"
-    ]
+    ],
+    "repo": "https://gitlab.com/kicad/code/kicad"
   },
   {
     "name": "Wireshark",
@@ -1674,7 +1739,8 @@
       "Réseau",
       "Sécurité",
       "Analyse"
-    ]
+    ],
+    "repo": "https://gitlab.com/wireshark/wireshark"
   },
   {
     "name": "Nmap",
@@ -1696,7 +1762,8 @@
       "Réseau",
       "Sécurité",
       "CLI"
-    ]
+    ],
+    "repo": "https://github.com/nmap/nmap"
   },
   {
     "name": "EasyTAG",
@@ -1720,7 +1787,8 @@
     ],
     "alternatives": [
       "Mp3tag"
-    ]
+    ],
+    "repo": "https://gitlab.gnome.org/GNOME/easytag"
   },
   {
     "name": "Tealdeer",
@@ -1745,7 +1813,8 @@
     ],
     "alternatives": [
       "man"
-    ]
+    ],
+    "repo": "https://github.com/dbrgn/tealdeer"
   },
   {
     "name": "Fastfetch",
@@ -1770,7 +1839,8 @@
     ],
     "alternatives": [
       "Neofetch"
-    ]
+    ],
+    "repo": "https://github.com/fastfetch-cli/fastfetch"
   },
   {
     "name": "Tmux",
@@ -1794,7 +1864,8 @@
     ],
     "alternatives": [
       "Screen"
-    ]
+    ],
+    "repo": "https://github.com/tmux/tmux"
   },
   {
     "name": "Lazygit",
@@ -1821,7 +1892,8 @@
       "GitKraken",
       "Sourcetree",
       "GitHub Desktop"
-    ]
+    ],
+    "repo": "https://github.com/jesseduffield/lazygit"
   },
   {
     "name": "Lazydocker",
@@ -1845,7 +1917,8 @@
     ],
     "alternatives": [
       "Docker Desktop"
-    ]
+    ],
+    "repo": "https://github.com/jesseduffield/lazydocker"
   },
   {
     "name": "HandBrake",
@@ -1870,7 +1943,8 @@
     ],
     "alternatives": [
       "Adobe Media Encoder"
-    ]
+    ],
+    "repo": "https://github.com/HandBrake/HandBrake"
   },
   {
     "name": "VLC media player",
@@ -1900,7 +1974,8 @@
     "alternatives": [
       "Windows Media Player",
       "QuickTime"
-    ]
+    ],
+    "repo": "https://code.videolan.org/videolan/vlc"
   },
   {
     "name": "Draw.io",
@@ -1927,7 +2002,8 @@
     "alternatives": [
       "Microsoft Visio",
       "Lucidchart"
-    ]
+    ],
+    "repo": "https://github.com/jgraph/drawio"
   },
   {
     "name": "VSCodium",
@@ -1956,7 +2032,8 @@
     "alternatives": [
       "Visual Studio Code",
       "Sublime Text"
-    ]
+    ],
+    "repo": "https://github.com/VSCodium/vscodium"
   },
   {
     "name": "Godot Engine",
@@ -1987,7 +2064,8 @@
     "alternatives": [
       "Unity",
       "Unreal Engine"
-    ]
+    ],
+    "repo": "https://github.com/godotengine/godot"
   },
   {
     "name": "Grafana",
@@ -2016,7 +2094,8 @@
     "alternatives": [
       "Datadog",
       "Kibana"
-    ]
+    ],
+    "repo": "https://github.com/grafana/grafana"
   },
   {
     "name": "AppFlowy",
@@ -2046,7 +2125,8 @@
     "alternatives": [
       "Notion",
       "Evernote"
-    ]
+    ],
+    "repo": "https://github.com/AppFlowy-IO/AppFlowy"
   },
   {
     "name": "RustDesk",
@@ -2076,7 +2156,8 @@
     "alternatives": [
       "TeamViewer",
       "AnyDesk"
-    ]
+    ],
+    "repo": "https://github.com/rustdesk/rustdesk"
   },
   {
     "name": "Podman",
@@ -2104,7 +2185,8 @@
     ],
     "alternatives": [
       "Docker Desktop"
-    ]
+    ],
+    "repo": "https://github.com/containers/podman"
   },
   {
     "name": "Teams for Linux",
@@ -2126,7 +2208,8 @@
     ],
     "alternatives": [
       "Microsoft Teams"
-    ]
+    ],
+    "repo": "https://github.com/IsmaelMartinez/teams-for-linux"
   },
   {
     "name": "MQTT Explorer",
@@ -2151,7 +2234,8 @@
     ],
     "alternatives": [
       "MQTT.fx"
-    ]
+    ],
+    "repo": "https://github.com/thomasnordquist/MQTT-Explorer"
   },
   {
     "name": "JetBrains Rider",
@@ -2228,7 +2312,8 @@
     ],
     "alternatives": [
       "Google Chrome"
-    ]
+    ],
+    "repo": "https://github.com/brave/brave-browser"
   },
   {
     "name": "Seafile",
@@ -2261,7 +2346,8 @@
       "Google Drive",
       "Dropbox",
       "OneDrive"
-    ]
+    ],
+    "repo": "https://github.com/haiwen/seafile"
   },
   {
     "name": "OxiCloud",
@@ -2285,7 +2371,8 @@
     "alternatives": [
       "Google Drive",
       "Nextcloud"
-    ]
+    ],
+    "repo": "https://github.com/AtalayaLabs/OxiCloud"
   },
   {
     "name": "Gitea",
@@ -2316,7 +2403,8 @@
       "GitHub",
       "GitLab",
       "Bitbucket"
-    ]
+    ],
+    "repo": "https://github.com/go-gitea/gitea"
   },
   {
     "name": "Freeplane",
@@ -2344,7 +2432,8 @@
     "alternatives": [
       "XMind",
       "MindManager"
-    ]
+    ],
+    "repo": "https://github.com/freeplane/freeplane"
   },
   {
     "name": "Krita",
@@ -2375,7 +2464,8 @@
       "Adobe Photoshop",
       "Clip Studio Paint",
       "Procreate"
-    ]
+    ],
+    "repo": "https://invent.kde.org/graphics/krita"
   },
   {
     "name": "Revolt",
@@ -2405,7 +2495,8 @@
     "alternatives": [
       "Discord",
       "Slack"
-    ]
+    ],
+    "repo": "https://github.com/revoltchat/desktop"
   },
   {
     "name": "Signal",
@@ -2437,6 +2528,7 @@
     "alternatives": [
       "WhatsApp",
       "Telegram"
-    ]
+    ],
+    "repo": "https://github.com/signalapp/Signal-Desktop"
   }
 ]

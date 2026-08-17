@@ -11,7 +11,8 @@ Ce dépôt ne se contente pas d'être une simple liste : il intègre une **inter
 * **Copie rapide des commandes** : Un clic sur un paquet génère et copie instantanément la commande d'installation exacte (ex: `sudo pacman -S btop`).
 * **Génération de script Bash** : Sélectionnez les logiciels que vous avez installés (✔️), et générez un script d'installation complet (regroupant intelligemment Pacman, AUR, Flatpak et Docker).
 * **Personnalisation** : Thèmes dynamiques (Clair, Sombre, OLED) et 8 couleurs d'accentuation au choix.
-* **Sauvegarde locale** : Vos favoris (👁️ Connus, ✔️ Installés) et votre thème sont automatiquement sauvegardés dans votre navigateur.
+* **Filtre "Alternatives à"** : Trouvez immédiatement par quel logiciel libre remplacer vos outils propriétaires (ex: *Photoshop* ➔ *GIMP*).
+* **Sauvegarde locale & Export** : Vos favoris (👁️ Connus, ✔️ Installés) et votre thème sont automatiquement sauvegardés dans votre navigateur. Vous pouvez désormais **Exporter** et **Importer** ces données sous format JSON.
 
 ## Comment démarrer
 
@@ -47,7 +48,9 @@ Il suffit d'éditer le fichier awesome_opensource.json et d'y ajouter un nouveau
   },
   "url": "[https://lien-officiel.com](https://lien-officiel.com)",
   "logo": "[https://icon.horse/icon/domaine.com](https://icon.horse/icon/domaine.com)",
-  "tags": ["Tag1", "Tag2"]
+  "tags": ["Tag1", "Tag2"],
+  "alternatives": ["Logiciel Propriétaire 1"],
+  "repo": "[https://github.com/utilisateur/projet](https://github.com/utilisateur/projet)"
 }
 ```
 
