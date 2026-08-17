@@ -92,7 +92,7 @@
     "platforms": ["Linux", "Windows", "macOS"],
     "packages": { "apt": "p7zip-full", "pacman": "7-zip", "winget": "7zip.7zip", "chocolatey": "7zip", "scoop": "7zip" },
     "url": "https://www.7-zip.org/",
-    "logo": "https://icon.horse/icon/www.7-zip.org",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/37/7-Zip_Logo.png",
     "tags": ["Archive", "Compression", "Système"]
   },
   {
@@ -103,7 +103,7 @@
     "platforms": ["Linux", "Windows", "macOS"],
     "packages": { "aur": "zen-browser-bin", "flatpak": "io.github.zen_browser.zen", "winget": "ZenBrowser.ZenBrowser" },
     "url": "https://zen-browser.app/",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/37/7-Zip_Logo.png",
+    "logo": "https://icon.horse/icon/zen-browser.app",
     "tags": ["Web", "Navigateur", "Minimaliste", "Vie Privée"]
   },
   {
