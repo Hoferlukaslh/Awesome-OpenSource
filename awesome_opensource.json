@@ -2530,5 +2530,107 @@
       "Telegram"
     ],
     "repo": "https://github.com/signalapp/Signal-Desktop"
+  },
+  {
+    "name": "SnapOtter",
+    "category": "Cloud & Serveur",
+    "description": "Outil auto-hébergé de traitement de fichiers (images, vidéo, audio, PDF) avec des fonctionnalités d'IA locale.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Web"
+    ],
+    "packages": {
+      "docker": "snapotter/snapotter:latest"
+    },
+    "url": "https://snapotter.com",
+    "logo": "https://icon.horse/icon/snapotter.com",
+    "tags": [
+      "Self-Hosted",
+      "Outils",
+      "IA"
+    ],
+    "alternatives": [
+      "CloudConvert",
+      "Smallpdf",
+      "Otter.ai"
+    ],
+    "repo": "https://github.com/snapotter-hq/snapotter"
+  },
+  {
+    "name": "Stirling PDF",
+    "category": "Cloud & Serveur",
+    "description": "Application web auto-hébergée robuste permettant d'effectuer diverses opérations sur les fichiers PDF (fusion, conversion, édition).",
+    "license": "Open-core",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "docker": "docker.stirlingpdf.com/stirlingtools/stirling-pdf"
+    },
+    "url": "https://stirlingpdf.com",
+    "logo": "https://icon.horse/icon/stirlingpdf.com",
+    "tags": [
+      "PDF",
+      "Self-Hosted",
+      "Outils"
+    ],
+    "alternatives": [
+      "Adobe Acrobat",
+      "Smallpdf"
+    ],
+    "repo": "https://github.com/Stirling-Tools/Stirling-PDF"
+  },
+  {
+    "name": "Voicebox",
+    "category": "Multimédia",
+    "description": "Studio vocal IA local et open source pour la synthèse et le clonage de voix.",
+    "license": "Open Source",
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "packages": {
+      "docker": "vastai/voicebox"
+
+    },
+    "url": "https://voicebox.sh/",
+    "logo": "https://voicebox.sh/_next/image?url=%2Fvoicebox-logo-app.webp&w=32&q=75",
+    "tags": [
+      "Audio",
+      "IA",
+      "TTS"
+    ],
+    "alternatives": [
+      "ElevenLabs",
+      "WisprFlow"
+    ],
+    "repo": "https://github.com/jamiepine/voicebox"
+  },
+  {
+    "name": "OpenGYM",
+    "category": "Productivité",
+    "description": "Application de gestion et de suivi d'entraînements sportifs en auto-hébergement.",
+    "license": "Open Source",
+    "platforms": [
+      "Web",
+      "Android"
+    ],
+    "packages": {},
+    "url": "https://opengym.duarte-santos.ch/",
+    "logo": "https://icon.horse/icon/opengym.duarte-santos.ch",
+    "tags": [
+      "Sport",
+      "Santé",
+      "Self-Hosted"
+    ],
+    "alternatives": [
+      "Strong",
+      "Hevy"
+    ],
+    "repo": "https://gitea.com/DuarteSantos/openGym"
   }
 ]
