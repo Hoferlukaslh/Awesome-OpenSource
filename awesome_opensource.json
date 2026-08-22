@@ -2632,5 +2632,91 @@
       "Hevy"
     ],
     "repo": "https://gitea.com/DuarteSantos/openGym"
+  },
+  {
+    "name": "Microsoft PowerToys",
+    "category": "Utilitaires",
+    "description": "Ensemble d'utilitaires pour les utilisateurs avancés afin d'optimiser et de rationaliser leur expérience Windows.",
+    "license": "MIT",
+    "platforms": [
+      "Windows"
+    ],
+    "packages": {
+      "winget": "Microsoft.PowerToys",
+      "scoop": "powertoys",
+      "chocolatey": "powertoys"
+    },
+    "url": "https://learn.microsoft.com/windows/powertoys/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/2020_PowerToys_Icon.svg/1280px-2020_PowerToys_Icon.svg.png",
+    "tags": [
+      "Windows",
+      "Utilitaires",
+      "Productivité"
+    ],
+    "alternatives": [
+      "Sysinternals Suite",
+      "NirLauncher"
+    ],
+    "repo": "https://github.com/microsoft/PowerToys"
+  },
+  {
+    "name": "Upscayl",
+    "category": "Multimédia",
+    "description": "Logiciel d'agrandissement et d'amélioration d'images par intelligence artificielle (AI upscaler) gratuit, open source et fonctionnant localement.",
+    "license": "AGPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "aur": "upscayl-bin",
+      "snap": "upscayl",
+      "flatpak": "org.upscayl.Upscayl",
+      "winget": "Upscayl.Upscayl"
+    },
+    "url": "https://upscayl.org",
+    "logo": "https://icon.horse/icon/upscayl.org",
+    "tags": [
+      "Image",
+      "IA",
+      "Upscaling"
+    ],
+    "alternatives": [
+      "Topaz Gigapixel AI",
+      "VanceAI"
+    ],
+    "repo": "https://github.com/upscayl/upscayl"
+  },
+  {
+    "name": "Kdenlive",
+    "category": "Multimédia",
+    "description": "Logiciel de montage vidéo non linéaire open source, puissant et multiplateforme développé par KDE.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "kdenlive",
+      "pacman": "kdenlive",
+      "flatpak": "org.kde.kdenlive",
+      "snap": "kdenlive",
+      "winget": "KDE.Kdenlive"
+    },
+    "url": "https://kdenlive.org/",
+    "logo": "https://icon.horse/icon/kdenlive.org",
+    "tags": [
+      "Vidéo",
+      "Montage",
+      "Éditeur"
+    ],
+    "alternatives": [
+      "Adobe Premiere Pro",
+      "DaVinci Resolve",
+      "Final Cut Pro"
+    ],
+    "repo": "https://invent.kde.org/multimedia/kdenlive"
   }
 ]
