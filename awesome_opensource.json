@@ -2718,5 +2718,95 @@
       "Final Cut Pro"
     ],
     "repo": "https://invent.kde.org/multimedia/kdenlive"
+  },
+  {
+    "name": "Qalculate!",
+    "category": "Utilitaires",
+    "description": "Calculatrice multiplateforme extrêmement puissante et polyvalente avec conversion d'unités.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "apt": "qalculate-gtk",
+      "pacman": "qalculate-gtk",
+      "flatpak": "io.github.Qalculate.qalculate-qt",
+      "snap": "qalculate",
+      "winget": "Qalculate.Qalculate",
+      "scoop": "qalculate"
+    },
+    "url": "https://qalculate.github.io/",
+    "logo": "https://icon.horse/icon/qalculate.github.io",
+    "tags": [
+      "Calculatrice",
+      "Mathématiques",
+      "Utilitaires"
+    ],
+    "alternatives": [
+      "SpeedCrunch",
+      "Calculatrice Windows"
+    ],
+    "repo": "https://github.com/Qalculate/qalculate-gtk"
+  },
+  {
+    "name": "Pinta",
+    "category": "Multimédia",
+    "description": "Programme de dessin et d'édition d'images simple et open source, inspiré de Paint.NET.",
+    "license": "MIT",
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "pacman": "pinta",
+      "flatpak": "com.github.PintaProject.Pinta",
+      "snap": "pinta",
+      "winget": "PintaProject.Pinta"
+    },
+    "url": "https://pinta-project.com/",
+    "logo": "https://icon.horse/icon/pinta-project.com",
+    "tags": [
+      "Image",
+      "Dessin",
+      "Éditeur"
+    ],
+    "alternatives": [
+      "Paint.NET",
+      "GIMP"
+    ],
+    "repo": "https://github.com/PintaProject/Pinta"
+  },
+  {
+    "name": "Navidrome",
+    "category": "Cloud & Serveur",
+    "description": "Serveur de streaming musical moderne, léger et auto-hébergé, compatible avec l'API Subsonic.",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "packages": {
+      "docker": "deluan/navidrome",
+      "aur": "navidrome-bin"
+    },
+    "url": "https://www.navidrome.org/",
+    "logo": "https://icon.horse/icon/www.navidrome.org",
+    "tags": [
+      "Audio",
+      "Musique",
+      "Streaming",
+      "Self-Hosted"
+    ],
+    "alternatives": [
+      "Plexamp",
+      "Jellyfin",
+      "Airsonic"
+    ],
+    "repo": "https://github.com/navidrome/navidrome"
   }
 ]
