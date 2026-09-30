@@ -2917,5 +2917,34 @@
       "PCSX2"
     ],
     "repo": "https://github.com/open-goal/launcher"
-  }
+  },
+  {
+  "name": "Altersend",
+  "category": "Utilitaires",
+  "description": "Permet d'envoyer des fichiers avec un chiffrement de bout en bout, vers n'importe quel appareil ou à toute personne disposant d'un lien.",
+  "license": "Apache-2.0",
+  "platforms": [
+    "Web",
+    "macOS",
+    "Windows",
+    "Linux",
+    "iOS",
+    "Android"
+  ],
+  "packages": {},
+  "url": "https://altersend.com/",
+  "logo": "https://altersend.com/favicon.ico",
+  "tags": [
+    "Partage",
+    "Fichiers",
+    "Chiffrement",
+    "E2EE"
+  ],
+  "alternatives": [
+    "SwissTransfer",
+    "Send Anywhere",
+    "Wormhole"
+  ],
+  "repo": "https://github.com/denislupookov/altersend"
+}
 ]
