@@ -1354,7 +1354,7 @@
       "winget": "Wails.Wails"
     },
     "url": "https://wails.io",
-    "logo": "https://icon.horse/icon/wails.io",
+    "logo": "https://wails.io/img/favicon.ico",
     "tags": [
       "Go",
       "Framework",
@@ -1380,7 +1380,7 @@
     ],
     "packages": {},
     "url": "https://fyne.io",
-    "logo": "https://icon.horse/icon/fyne.io",
+    "logo": "https://fyne.io/img/favicon.png",
     "tags": [
       "Go",
       "Framework",
@@ -2835,5 +2835,87 @@
       "AutoAbliteration"
     ],
     "repo": "https://github.com/p-e-w/heretic"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "name": "Shipwright",
+    "category": "Jeux",
+    "description": "Portage PC natif de The Legend of Zelda: Ocarina of Time (connu sous le nom de Ship of Harkinian).",
+    "license": "Inconnue",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Wii U",
+      "Switch"
+    ],
+    "packages": {},
+    "url": "https://www.shipofharkinian.com",
+    "logo": "https://www.shipofharkinian.com/favicon.ico",
+    "tags": [
+      "Jeux",
+      "Portage",
+      "Zelda",
+      "Retro"
+    ],
+    "alternatives": [
+      "Project64",
+      "RetroArch"
+    ],
+    "repo": "https://github.com/HarbourMasters/Shipwright"
+  },
+  {
+    "name": "Dusklight",
+    "category": "Jeux",
+    "description": "portage natif de The Legend of Zelda: Twilight Princess pour PC et appareils mobiles.",
+    "license": "GPL-2.0",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "Android"
+    ],
+    "packages": {},
+    "url": "https://twilitrealm.dev/",
+    "logo": "https://icon.horse/icon/github.com",
+    "tags": [
+      "Jeux",
+      "Portage",
+      "Retro"
+    ],
+    "alternatives": [
+      "Dolphin"
+    ],
+    "repo": "https://github.com/TwilitRealm/dusklight"
+  },
+  {
+    "name": "OpenGOAL",
+    "category": "Jeux",
+    "description": "Lanceur conçu pour simplifier l'utilisation et l'installation des portage PC de la série Jak and Daxter + Mods.",
+    "license": "ISC license",
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "packages": {},
+    "url": "https://opengoal.dev/",
+    "logo": "https://opengoal.dev/img/logo.png",
+    "tags": [
+      "Jeux",
+      "Launcher",
+      "Portage",
+      "Retro"
+    ],
+    "alternatives": [
+      "PCSX2"
+    ],
+    "repo": "https://github.com/open-goal/launcher"
   }
 ]

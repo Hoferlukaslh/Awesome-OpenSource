@@ -753,7 +753,9 @@
                     </div>
 
                     <div class="card-header">
-                        <img src="${item.logo}" alt="Logo" class="logo-img" onerror="this.onerror=null;this.src='${fallbackImage}';">
+                        <img src="${item.logo}" data-src="${item.logo}" alt="Logo" class="logo-img"
+                            loading="lazy" referrerpolicy="no-referrer"
+                            onerror="logoError(this, '${fallbackImage}')">
                         <div class="card-title-group">
                             <div class="category">${item.category}</div>
                             <div class="card-title">${item.name}</div>
@@ -863,6 +865,24 @@
             };
             reader.readAsText(file);
             event.target.value = '';
+        }
+
+        function logoError(img, fallback) {
+            const tries = Number(img.dataset.tries || 0);
+            if (tries < 2) {
+                img.dataset.tries = tries + 1;
+                setTimeout(() => {
+                    img.src = img.dataset.src + (img.dataset.src.includes('?') ? '&' : '?') + 'r=' + Date.now();
+                }, 500 * (tries + 1));
+            } else {
+                img.onerror = null;
+                img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+                    `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+                    <rect width="128" height="128" fill="#334155"/>
+                    <text x="50%" y="50%" fill="#fff" font-size="64" font-family="sans-serif"
+                            text-anchor="middle" dominant-baseline="central">${(img.alt === 'Logo' ? (fallback.match(/name=([^&]*)/)||[])[1] : '?') ? decodeURIComponent((fallback.match(/name=([^&]*)/)||[])[1]).charAt(0).toUpperCase() : '?'}</text>
+                    </svg>`);
+            }
         }
 
         document.getElementById('searchInput').addEventListener('input', applyFilters);
